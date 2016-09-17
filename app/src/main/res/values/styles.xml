@@ -15,7 +15,6 @@
     </style>
 
     <style name="AppTheme.NoActionBar.Fullscreen">
-        <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
