@@ -21,6 +21,9 @@ public final class RepositoryProvider {
         return sComicsRepository;
     }
 
+    public static void setComicsRepository(ComicsRepository comicsRepository) {
+        sComicsRepository = comicsRepository;
+    }
 
     @MainThread
     public static void init() {
