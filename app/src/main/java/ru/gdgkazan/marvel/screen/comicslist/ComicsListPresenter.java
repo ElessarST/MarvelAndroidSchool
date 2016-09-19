@@ -6,6 +6,7 @@ import ru.arturvasilov.rxloader.LifecycleHandler;
 import ru.gdgkazan.marvel.R;
 import ru.gdgkazan.marvel.content.comics.ComicsResponseData;
 import ru.gdgkazan.marvel.repository.RepositoryProvider;
+import ru.gdgkazan.marvel.util.Constants;
 
 /**
  * @author Aydar Farrakhov
@@ -23,7 +24,7 @@ public class ComicsListPresenter {
 
     public void init() {
         RepositoryProvider.provideComicsRepository()
-                .comics()
+                .comics(Constants.ZERO_OFFSET, Constants.DEFAULT_LIMIT)
                 .doOnSubscribe(mView::showLoading)
                 .doOnTerminate(mView::hideLoading)
                 .compose(mLifecycleHandler.load(R.id.comics_request))

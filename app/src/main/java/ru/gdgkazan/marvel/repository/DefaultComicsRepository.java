@@ -17,9 +17,9 @@ public class DefaultComicsRepository implements ComicsRepository {
 
     @NonNull
     @Override
-    public Observable<ComicsResponseData> comics() {
+    public Observable<ComicsResponseData> comics(Long offset, Long limit) {
         return ApiFactory.getComicsService()
-                .comics()
+                .comics(offset, limit)
                 .flatMap(new RealmSingleRewriteCache<>(ComicsResponse.class))
                 .onErrorResumeNext(new RealmSingleCacheErrorHandler<>(ComicsResponse.class))
                 .compose(RxUtils.async())
