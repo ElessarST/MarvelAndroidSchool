@@ -65,7 +65,7 @@ public class ComicsListPresenterTest {
 
         @NonNull
         @Override
-        public Observable<ComicsResponseData> comics(){
+        public Observable<ComicsResponseData> comics(Long offset, Long limit){
             if (this.error){
                 return Observable.error(new IOException());
             } else {
