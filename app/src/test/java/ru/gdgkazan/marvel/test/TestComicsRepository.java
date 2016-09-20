@@ -13,7 +13,7 @@ public class TestComicsRepository implements ComicsRepository {
 
     @NonNull
     @Override
-    public Observable<ComicsResponseData> comics() {
+    public Observable<ComicsResponseData> comics(Long offset, Long limit) {
         return Observable.empty();
     }
 }

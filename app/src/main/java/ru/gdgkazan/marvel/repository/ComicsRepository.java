@@ -11,6 +11,6 @@ import rx.Observable;
 public interface ComicsRepository {
 
     @NonNull
-    Observable<ComicsResponseData> comics();
+    Observable<ComicsResponseData> comics(Long offset, Long limit);
 
 }
