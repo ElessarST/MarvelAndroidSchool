@@ -10,6 +10,8 @@ public final class RepositoryProvider {
 
     private static ComicsRepository sComicsRepository;
 
+    private static CharactersRepository sCharactersRepository;
+
     private RepositoryProvider() {
     }
 
@@ -23,6 +25,18 @@ public final class RepositoryProvider {
 
     public static void setComicsRepository(ComicsRepository comicsRepository) {
         sComicsRepository = comicsRepository;
+    }
+
+    @NonNull
+    public static CharactersRepository provideCharactersRepository() {
+        if (sCharactersRepository == null) {
+            sCharactersRepository = new DefaultCharactersRepository();
+        }
+        return sCharactersRepository;
+    }
+
+    public static void setCharactersRepository(CharactersRepository charactersRepository) {
+        sCharactersRepository = charactersRepository;
     }
 
     @MainThread
