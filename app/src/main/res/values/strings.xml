@@ -3,4 +3,6 @@
 
     <string name="loading">Loading…</string>
     <string name="empty_comics">comics not found</string>
+    <string name="character">Some name</string>
+    <string name="characters">Something here</string>
 </resources>
