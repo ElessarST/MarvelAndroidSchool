@@ -1,6 +1,7 @@
 package ru.gdgkazan.marvel.screen;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -38,16 +39,20 @@ public class MainActivity extends AppCompatActivity
         ButterKnife.bind(this);
         setSupportActionBar(mToolbar);
 
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, mDrawer, mToolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        mDrawer.addDrawerListener(toggle);
-        toggle.syncState();
-
         mNavigationView.setNavigationItemSelectedListener(this);
 
         if (savedInstanceState == null) {
             onNavigationItemSelected(mNavigationView.getMenu().getItem(0));
         }
+    }
+
+    @Override
+    protected void onPostCreate(@Nullable Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, mDrawer, mToolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        mDrawer.addDrawerListener(toggle);
+        toggle.syncState();
     }
 
     @Override
@@ -63,12 +68,22 @@ public class MainActivity extends AppCompatActivity
     }
 
 
-    @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
-        Fragment fragment = ComicsListFragment.newInstance();
+        Fragment fragment = getFragmentById(id);
 
+        if (fragment == null){
+            fragment = ComicsListFragment.newInstance();
+        }
+
+        replaceFragment(fragment);
+        mDrawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
+
+    private Fragment getFragmentById(int id) {
+        Fragment fragment = null;
         if (id == R.id.comics) {
             fragment = ComicsListFragment.newInstance();
         } else if (id == R.id.characters) {
@@ -76,10 +91,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.events) {
             fragment = EventsListFragment.newInstance();
         }
-
-        replaceFragment(fragment);
-        mDrawer.closeDrawer(GravityCompat.START);
-        return true;
+        return fragment;
     }
 
     private void replaceFragment (Fragment fragment){
