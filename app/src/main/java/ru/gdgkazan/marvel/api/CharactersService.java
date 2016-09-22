@@ -12,4 +12,8 @@ public interface CharactersService {
     @GET("characters")
     Observable<CharactersResponse> characters();
 
+
+    @GET("characters/{characterId/comics}")
+    Observable<ComicsResponse> comicsByCharacter(@Path("characterId") Long id);
+
 }

@@ -3,4 +3,18 @@
 
     <string name="loading">Loading…</string>
     <string name="empty_comics">comics not found</string>
+
+    <string name="title_activity_main">Marvel Universe</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="marvel">MARVEL</string>
+    <string name="marvel_copyright">Data provided by Marvel. © 2014 Marvel</string>
+    <string name="comics">Comics</string>
+    <string name="characters">Characters</string>
+    <string name="events">Events</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
