@@ -6,7 +6,6 @@ import com.google.gson.annotations.SerializedName;
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 import ru.gdgkazan.marvel.content.Image;
-import ru.gdgkazan.marvel.content.MarvelDataList;
 
 public class Character extends RealmObject {
 
@@ -22,18 +21,6 @@ public class Character extends RealmObject {
 
     @SerializedName("image")
     private Image image;
-
-    @SerializedName("comics")
-    private MarvelDataList comics;
-
-    @SerializedName("stories")
-    private MarvelDataList stories;
-
-    @SerializedName("events")
-    private MarvelDataList events;
-
-    @SerializedName("series")
-    private MarvelDataList series;
 
     public String getId() {
         return id;
@@ -65,37 +52,5 @@ public class Character extends RealmObject {
 
     public void setImage(Image image) {
         this.image = image;
-    }
-
-    public MarvelDataList getComics() {
-        return comics;
-    }
-
-    public void setComics(MarvelDataList comics) {
-        this.comics = comics;
-    }
-
-    public MarvelDataList getStories() {
-        return stories;
-    }
-
-    public void setStories(MarvelDataList stories) {
-        this.stories = stories;
-    }
-
-    public MarvelDataList getEvents() {
-        return events;
-    }
-
-    public void setEvents(MarvelDataList events) {
-        this.events = events;
-    }
-
-    public MarvelDataList getSeries() {
-        return series;
-    }
-
-    public void setSeries(MarvelDataList series) {
-        this.series = series;
     }
 }
