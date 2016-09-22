@@ -10,6 +10,8 @@ public final class RepositoryProvider {
 
     private static ComicsRepository sComicsRepository;
 
+    private static EventsRepository sEventsRepository;
+
     private RepositoryProvider() {
     }
 
@@ -23,6 +25,18 @@ public final class RepositoryProvider {
 
     public static void setComicsRepository(ComicsRepository comicsRepository) {
         sComicsRepository = comicsRepository;
+    }
+
+    @NonNull
+    public static EventsRepository provideEventsRepository() {
+        if (sEventsRepository == null) {
+            sEventsRepository = new DefaultEventsRepository();
+        }
+        return sEventsRepository;
+    }
+
+    public static void setEventsRepository(EventsRepository eventsRepository) {
+        sEventsRepository = eventsRepository;
     }
 
     @MainThread
