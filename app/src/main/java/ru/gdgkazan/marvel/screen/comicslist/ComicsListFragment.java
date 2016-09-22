@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +20,7 @@ import ru.gdgkazan.marvel.R;
 import ru.gdgkazan.marvel.content.comics.Comics;
 import ru.gdgkazan.marvel.general.LoadingDialog;
 import ru.gdgkazan.marvel.general.LoadingView;
+import ru.gdgkazan.marvel.screen.common.CommonAdapter;
 import ru.gdgkazan.marvel.widget.DividerItemDecoration;
 import ru.gdgkazan.marvel.widget.EmptyRecyclerView;
 
@@ -36,7 +36,7 @@ public class ComicsListFragment extends Fragment implements ComicsView {
 
     private LoadingView mLoadingView;
 
-    private ComicsListAdapter mAdapter;
+    private CommonAdapter mAdapter;
 
     private ComicsListPresenter mPresenter;
 
@@ -75,19 +75,8 @@ public class ComicsListFragment extends Fragment implements ComicsView {
         return view;
     }
 
-    private ComicsListAdapter getAdapter() {
-        TypedValue typedValue = new TypedValue();
-        getResources().getValue(R.dimen.rows_count, typedValue, true);
-        float rowsCount = typedValue.getFloat();
-        int actionBarHeight = getActivity().getTheme().resolveAttribute(R.attr.actionBarSize, typedValue, true)
-                ? TypedValue.complexToDimensionPixelSize(typedValue.data, getResources().getDisplayMetrics())
-                : 0;
-        int imageHeight = (int) ((getResources().getDisplayMetrics().heightPixels - actionBarHeight) / rowsCount);
-
-        int columns = 2;
-        int imageWidth = getResources().getDisplayMetrics().widthPixels / columns;
-
-        return new ComicsListAdapter(new ArrayList<>(), imageWidth, imageHeight);
+    private CommonAdapter getAdapter() {
+        return new CommonAdapter(new ArrayList<>());
     }
 
     @Override
@@ -95,12 +84,10 @@ public class ComicsListFragment extends Fragment implements ComicsView {
         super.onAttach(context);
     }
 
-
     @Override
     public void onDetach() {
         super.onDetach();
     }
-
 
     @Override
     public void showLoading() {
