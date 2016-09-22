@@ -1,7 +1,9 @@
 package ru.gdgkazan.marvel.api;
 
 import retrofit2.http.GET;
+import retrofit2.http.Path;
 import ru.gdgkazan.marvel.content.character.CharactersResponse;
+import ru.gdgkazan.marvel.content.comics.ComicsResponse;
 import rx.Observable;
 
 /**
