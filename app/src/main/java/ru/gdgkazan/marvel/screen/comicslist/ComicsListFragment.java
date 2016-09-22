@@ -1,13 +1,13 @@
 package ru.gdgkazan.marvel.screen.comicslist;
 
-import android.app.Activity;
-import android.content.Intent;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,13 +23,9 @@ import ru.gdgkazan.marvel.general.LoadingView;
 import ru.gdgkazan.marvel.widget.DividerItemDecoration;
 import ru.gdgkazan.marvel.widget.EmptyRecyclerView;
 
-/**
- * @author Aydar Farrakhov
- */
-public class ComicsListActivity extends AppCompatActivity implements ComicsView{
 
-    @BindView(R.id.toolbar)
-    Toolbar mToolbar;
+public class ComicsListFragment extends Fragment implements ComicsView {
+
 
     @BindView(R.id.recyclerView)
     EmptyRecyclerView mRecyclerView;
@@ -43,30 +39,50 @@ public class ComicsListActivity extends AppCompatActivity implements ComicsView{
 
     private ComicsListPresenter mPresenter;
 
-    public static void start(@NonNull Activity activity) {
-        Intent intent = new Intent(activity, ComicsListActivity.class);
-        activity.startActivity(intent);
+    public ComicsListFragment() {
+    }
+
+
+    public static ComicsListFragment newInstance() {
+        return new ComicsListFragment();
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_comics_list);
-        ButterKnife.bind(this);
-        setSupportActionBar(mToolbar);
+    }
 
-        mLoadingView = LoadingDialog.view(getSupportFragmentManager());
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_comics_list, container, false);
+        ButterKnife.bind(this, view);
+        getActivity().setTitle(getString(R.string.comics));
 
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        mRecyclerView.addItemDecoration(new DividerItemDecoration(this));
+        mLoadingView = LoadingDialog.view(getChildFragmentManager());
+
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        mRecyclerView.addItemDecoration(new DividerItemDecoration(getActivity()));
         mRecyclerView.setEmptyView(mEmptyView);
 
         mAdapter = new ComicsListAdapter(new ArrayList<>());
         mAdapter.attachToRecyclerView(mRecyclerView);
 
-        LifecycleHandler lifecycleHandler = LoaderLifecycleHandler.create(this, getSupportLoaderManager());
+        LifecycleHandler lifecycleHandler = LoaderLifecycleHandler.create(getActivity(), getLoaderManager());
         mPresenter = new ComicsListPresenter(lifecycleHandler, this);
         mPresenter.init();
+        return view;
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+    }
+
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
     }
 
 
@@ -89,4 +105,5 @@ public class ComicsListActivity extends AppCompatActivity implements ComicsView{
     public void showError() {
         mAdapter.clear();
     }
+
 }
