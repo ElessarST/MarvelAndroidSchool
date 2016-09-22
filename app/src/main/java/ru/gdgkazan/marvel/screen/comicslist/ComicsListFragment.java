@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -65,13 +66,28 @@ public class ComicsListFragment extends Fragment implements ComicsView {
         mRecyclerView.addItemDecoration(new DividerItemDecoration(getActivity()));
         mRecyclerView.setEmptyView(mEmptyView);
 
-        mAdapter = new ComicsListAdapter(new ArrayList<>());
+        mAdapter = getAdapter();
         mAdapter.attachToRecyclerView(mRecyclerView);
 
         LifecycleHandler lifecycleHandler = LoaderLifecycleHandler.create(getActivity(), getLoaderManager());
         mPresenter = new ComicsListPresenter(lifecycleHandler, this);
         mPresenter.init();
         return view;
+    }
+
+    private ComicsListAdapter getAdapter() {
+        TypedValue typedValue = new TypedValue();
+        getResources().getValue(R.dimen.rows_count, typedValue, true);
+        float rowsCount = typedValue.getFloat();
+        int actionBarHeight = getActivity().getTheme().resolveAttribute(R.attr.actionBarSize, typedValue, true)
+                ? TypedValue.complexToDimensionPixelSize(typedValue.data, getResources().getDisplayMetrics())
+                : 0;
+        int imageHeight = (int) ((getResources().getDisplayMetrics().heightPixels - actionBarHeight) / rowsCount);
+
+        int columns = 2;
+        int imageWidth = getResources().getDisplayMetrics().widthPixels / columns;
+
+        return new ComicsListAdapter(new ArrayList<>(), imageWidth, imageHeight);
     }
 
     @Override

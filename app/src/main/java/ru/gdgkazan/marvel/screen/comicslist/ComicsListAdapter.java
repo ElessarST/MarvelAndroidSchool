@@ -1,12 +1,10 @@
 package ru.gdgkazan.marvel.screen.comicslist;
 
 import android.support.annotation.NonNull;
-import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import java.util.List;
 
-import ru.gdgkazan.marvel.R;
 import ru.gdgkazan.marvel.content.comics.Comics;
 import ru.gdgkazan.marvel.widget.BaseAdapter;
 
@@ -15,14 +13,18 @@ import ru.gdgkazan.marvel.widget.BaseAdapter;
  */
 public class ComicsListAdapter extends BaseAdapter<ComicsHolder, Comics> {
 
-    public ComicsListAdapter(@NonNull List<Comics> items) {
+    private final int mImageHeight;
+    private final int mImageWidth;
+
+    public ComicsListAdapter(@NonNull List<Comics> items, int imageWidth, int imageHeight) {
         super(items);
+        mImageHeight = imageHeight;
+        mImageWidth = imageWidth;
     }
 
     @Override
     public ComicsHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new ComicsHolder(LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_comics, parent, false));
+        return ComicsHolder.create(parent.getContext(), mImageWidth, mImageHeight);
     }
 
     @Override
