@@ -47,5 +47,59 @@ public class Event implements RealmModel {
     @SerializedName("thumbnail")
     private Image mImage;
 
+    public Long getId() {
+        return mId;
+    }
 
+    public void setId(Long mId) {
+        this.mId = mId;
+    }
+
+    public String getTitle() {
+        return mTitle;
+    }
+
+    public void setTitle(String mTitle) {
+        this.mTitle = mTitle;
+    }
+
+    public String getDescription() {
+        return mDescription;
+    }
+
+    public void setDescription(String mDescription) {
+        this.mDescription = mDescription;
+    }
+
+    public String getResourceURI() {
+        return mResourceURI;
+    }
+
+    public void setResourceURI(String mResourceURI) {
+        this.mResourceURI = mResourceURI;
+    }
+
+    public Date getStart() {
+        return mStart;
+    }
+
+    public void setStart(Date mStart) {
+        this.mStart = mStart;
+    }
+
+    public Image getImage() {
+        return mImage;
+    }
+
+    public void setImage(Image mImage) {
+        this.mImage = mImage;
+    }
+
+    public Date getEnd() {
+        return mEnd;
+    }
+
+    public void setEnd(Date mEnd) {
+        this.mEnd = mEnd;
+    }
 }
