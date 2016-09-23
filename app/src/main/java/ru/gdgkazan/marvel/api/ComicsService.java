@@ -12,7 +12,8 @@ import rx.Observable;
 public interface ComicsService {
 
     @GET("comics")
-    Observable<ComicsResponse> comics(@Query("offset") Long offset, @Query("limit") Long limit);
+    Observable<ComicsResponse> comics(@Query("offset") Long offset, @Query("limit") Long limit,
+                                      @Query("orderBy") String orderBy);
 
     @GET("comics/{comicsId}")
     Observable<ComicsResponse> comics(@Path("comicsId") Long id);

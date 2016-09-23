@@ -17,8 +17,8 @@ import ru.gdgkazan.marvel.util.Images;
  */
 public class ItemHolder extends RecyclerView.ViewHolder {
 
-    private static int MAX_LENGTH = 80;
-    private static String MORE_TEXT = "...";
+    private static final int MAX_LENGTH = 80;
+    private static final String MORE_TEXT = "...";
 
     @BindView(R.id.name)
     TextView mName;
@@ -46,7 +46,9 @@ public class ItemHolder extends RecyclerView.ViewHolder {
         if (item.getDescription() != null){
             mDescription.setText(cutLongDescription(item.getDescription()));
         }
-        Images.loadPicture(mImageView, String.format("%s.%s", item.getImage().getPath(), item.getImage().getExtension()));
+        if (item.getImage() != null){
+            Images.loadPicture(mImageView, String.format("%s.%s", item.getImage().getPath(), item.getImage().getExtension()));
+        }
     }
 
     private String cutLongDescription(String description) {
