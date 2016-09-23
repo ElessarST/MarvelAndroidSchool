@@ -5,7 +5,7 @@ package ru.gdgkazan.marvel.util;
  */
 public interface Constants {
 
-    Long DEFAULT_LIMIT = 10L;
-    Long ZERO_OFFSET = 10L;
+    Long PAGE_SIZE = 10L;
+    Long ZERO_OFFSET = 0L;
 
 }

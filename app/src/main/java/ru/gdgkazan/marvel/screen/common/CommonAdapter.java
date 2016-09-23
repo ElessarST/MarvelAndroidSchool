@@ -10,9 +10,9 @@ import ru.gdgkazan.marvel.widget.BaseAdapter;
 /**
  * @author Aydar Farrakhov
  */
-public class CommonAdapter extends BaseAdapter<ItemHolder,  ListItem> {
+public class CommonAdapter<T extends ListItem> extends BaseAdapter<ItemHolder,  T> {
 
-    public CommonAdapter(@NonNull List<ListItem> items) {
+    public CommonAdapter(@NonNull List<T> items) {
         super(items);
     }
 

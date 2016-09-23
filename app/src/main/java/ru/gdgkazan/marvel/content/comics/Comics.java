@@ -91,7 +91,10 @@ public class Comics extends RealmObject implements ListItem {
 
     @Override
     public String getDescription() {
-        return getTextObjects().get(0).getText();
+        if (!getTextObjects().isEmpty()){
+            return getTextObjects().get(0).getText();
+        }
+        return "";
     }
 
     @Override
