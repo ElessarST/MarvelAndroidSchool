@@ -24,7 +24,7 @@ public class EventsListPresenter {
 
     public void init() {
         RepositoryProvider.provideEventsRepository()
-                .events(Constants.ZERO_OFFSET, Constants.DEFAULT_LIMIT)
+                .events(Constants.ZERO_OFFSET, Constants.PAGE_SIZE)
                 .doOnSubscribe(mView::showLoading)
                 .doOnTerminate(mView::hideLoading)
                 .compose(mLifecycleHandler.load(R.id.comics_request))
