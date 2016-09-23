@@ -32,7 +32,7 @@ public class ComicsListPresenter {
                 .doOnSubscribe(mView::showLoading)
                 .doOnTerminate(mView::hideLoading)
                 .compose(mLifecycleHandler.load(R.id.comics_request))
-                .subscribe(mView::showItems, throwable -> mView.showError());
+                .subscribe(mView::showItems, throwable -> mView.showError(throwable));
     }
 
     public Observable<List<Comics>> loadMoreItems(int page) {

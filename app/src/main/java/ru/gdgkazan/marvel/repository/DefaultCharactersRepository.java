@@ -2,12 +2,15 @@ package ru.gdgkazan.marvel.repository;
 
 import android.support.annotation.NonNull;
 
+import java.util.List;
+
 import ru.arturvasilov.rxloader.RxUtils;
 import ru.gdgkazan.marvel.api.ApiFactory;
+import ru.gdgkazan.marvel.content.character.Character;
 import ru.gdgkazan.marvel.content.character.CharactersResponse;
 import ru.gdgkazan.marvel.content.character.CharactersResponseData;
-import ru.gdgkazan.marvel.repository.cache.RealmSingleCacheErrorHandler;
-import ru.gdgkazan.marvel.repository.cache.RealmSingleRewriteCache;
+import ru.gdgkazan.marvel.repository.cache.RealmCacheErrorHandler;
+import ru.gdgkazan.marvel.repository.cache.RealmRewriteCache;
 import rx.Observable;
 
 /**
@@ -17,12 +20,15 @@ public class DefaultCharactersRepository implements CharactersRepository {
 
     @NonNull
     @Override
-    public Observable<CharactersResponseData> characters() {
+    public Observable<List<Character>> characters(Long offset, Long limit) {
         return ApiFactory.getCharactersService()
-                .characters()
-                .flatMap(new RealmSingleRewriteCache<>(CharactersResponse.class))
-                .onErrorResumeNext(new RealmSingleCacheErrorHandler<>(CharactersResponse.class))
-                .compose(RxUtils.async())
-                .map(CharactersResponse::getData);
+                .characters(offset, limit)
+                .map(CharactersResponse::getData)
+                .map(CharactersResponseData::getResults)
+                .flatMap(new RealmRewriteCache<>(Character.class))
+                .onErrorResumeNext(new RealmCacheErrorHandler<>(Character.class))
+                .compose(RxUtils.async());
+
     }
+
 }

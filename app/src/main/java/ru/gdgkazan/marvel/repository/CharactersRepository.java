@@ -3,12 +3,13 @@ package ru.gdgkazan.marvel.repository;
 
 import android.support.annotation.NonNull;
 
-import ru.gdgkazan.marvel.content.character.CharactersResponse;
-import ru.gdgkazan.marvel.content.character.CharactersResponseData;
+import java.util.List;
+
+import ru.gdgkazan.marvel.content.character.Character;
 import rx.Observable;
 
 public interface CharactersRepository {
 
     @NonNull
-    Observable<CharactersResponseData> characters();
+    Observable<List<Character>> characters(Long offset, Long limit);
 }

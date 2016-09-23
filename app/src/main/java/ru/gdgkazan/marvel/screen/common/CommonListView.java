@@ -12,11 +12,11 @@ import ru.gdgkazan.marvel.general.LoadingView;
 
 public interface CommonListView<T> extends LoadingView {
 
-    void showItems(@NonNull List<T> comics);
+    void showItems(@NonNull List<T> items);
 
     void addMoreItems(List<T> items);
 
-    void showError();
+    void showError(Throwable throwable);
 
     void showDetails(T item);
 

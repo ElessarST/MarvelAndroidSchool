@@ -128,7 +128,7 @@ public class ComicsListFragment extends Fragment implements CommonListView<Comic
     }
 
     @Override
-    public void showError() {
+    public void showError(Throwable throwable) {
         mAdapter.clear();
     }
 
