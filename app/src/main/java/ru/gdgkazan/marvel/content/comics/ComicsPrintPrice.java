@@ -12,4 +12,11 @@ public class ComicsPrintPrice extends RealmObject {
     @SerializedName("price")
     private float mPrice;
 
+    public float getPrice() {
+        return mPrice;
+    }
+
+    public void setPrice(float price) {
+        mPrice = price;
+    }
 }

@@ -43,6 +43,12 @@ public class ComicsActivity extends AppCompatActivity implements ComicsView{
     @BindView(R.id.description)
     TextView mDescription;
 
+    @BindView(R.id.price)
+    TextView mPrice;
+
+    @BindView(R.id.pages)
+    TextView mPages;
+
     private ComicsPresenter mPresenter;
 
     private LoadingView mLoadingView;
@@ -106,10 +112,17 @@ public class ComicsActivity extends AppCompatActivity implements ComicsView{
         if (comics.getTextObjects() != null){
             StringBuilder description = new StringBuilder();
             for (ComicsTextObject comicsTextObject : comics.getTextObjects()) {
-                description.append(comicsTextObject.getText()).append("\n\n");
+                description.append(comicsTextObject.getText()).append("\n");
             }
             mDescription.setText(description.toString());
         }
+
+        if (comics.getPrices() != null && !comics.getPrices().isEmpty()){
+            mPrice.setText(getString(R.string.price_format, String.valueOf(comics.getPrices().get(0).getPrice())));
+        }
+
+        mPages.setText(String.valueOf(comics.getPageCount()));
+
     }
 
     private void prepareWindowForAnimation() {

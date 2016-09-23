@@ -29,7 +29,50 @@
             android:layout_height="wrap_content"
             android:textColor="@color/colorSecondaryText"
             android:textSize="@dimen/text.14"
-            android:layout_margin="@dimen/text_margin"/>
+            android:layout_marginTop="@dimen/text_margin"
+            android:layout_marginEnd="@dimen/text_margin"
+            android:layout_marginStart="@dimen/text_margin"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_margin"
+            android:layout_marginEnd="@dimen/text_margin"
+            android:layout_marginStart="@dimen/text_margin"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/text.18"
+            android:text="@string/price"/>
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/text.14"
+            android:layout_marginTop="@dimen/text_margin"
+            android:layout_marginEnd="@dimen/text_margin"
+            android:layout_marginStart="@dimen/text_margin"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_margin"
+            android:layout_marginEnd="@dimen/text_margin"
+            android:layout_marginStart="@dimen/text_margin"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/text.18"
+            android:text="@string/pages"/>
+
+        <TextView
+            android:id="@+id/pages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/text.14"
+            android:layout_marginTop="@dimen/text_margin"
+            android:layout_marginEnd="@dimen/text_margin"
+            android:layout_marginStart="@dimen/text_margin"/>
+
     </LinearLayout>
 
 </android.support.v4.widget.NestedScrollView>
