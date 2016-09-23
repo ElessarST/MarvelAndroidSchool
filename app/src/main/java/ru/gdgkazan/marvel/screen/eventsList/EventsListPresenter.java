@@ -1,4 +1,4 @@
-package ru.gdgkazan.marvel.screen.eventsList;
+package ru.gdgkazan.marvel.screen.eventslist;
 
 import android.support.annotation.NonNull;
 

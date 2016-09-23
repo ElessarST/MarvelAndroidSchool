@@ -5,13 +5,14 @@ import com.google.gson.annotations.SerializedName;
 import java.util.Date;
 
 import io.realm.RealmModel;
+import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 import ru.gdgkazan.marvel.content.Image;
 
 /**
  * @author Olga Telezhnikova
  */
-public class Event implements RealmModel {
+public class Event extends RealmObject {
 
     @PrimaryKey
     @SerializedName("id")
