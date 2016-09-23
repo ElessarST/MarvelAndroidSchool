@@ -21,7 +21,7 @@ import ru.gdgkazan.marvel.screen.comicslist.ComicsListFragment;
 import ru.gdgkazan.marvel.screen.eventslist.EventsListFragment;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener{
 
     @BindView(R.id.drawer_layout)
     DrawerLayout mDrawer;

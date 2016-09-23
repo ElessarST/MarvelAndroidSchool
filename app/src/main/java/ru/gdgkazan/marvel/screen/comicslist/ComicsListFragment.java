@@ -20,6 +20,7 @@ import ru.gdgkazan.marvel.R;
 import ru.gdgkazan.marvel.content.comics.Comics;
 import ru.gdgkazan.marvel.general.LoadingDialog;
 import ru.gdgkazan.marvel.general.LoadingView;
+import ru.gdgkazan.marvel.screen.comics.ComicsActivity;
 import ru.gdgkazan.marvel.screen.common.CommonAdapter;
 import ru.gdgkazan.marvel.screen.common.CommonListView;
 import ru.gdgkazan.marvel.screen.common.CommonOnScrollListener;
@@ -133,7 +134,7 @@ public class ComicsListFragment extends Fragment implements CommonListView<Comic
 
     @Override
     public void showDetails(Comics item) {
-        //show something
+        ComicsActivity.start(getActivity(), item);
     }
 
     @Override

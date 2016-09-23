@@ -15,4 +15,6 @@ public interface ComicsRepository {
     @NonNull
     Observable<List<Comics>> comics(Long offset, Long limit);
 
+    Observable<Comics> comics(Long id);
+
 }
