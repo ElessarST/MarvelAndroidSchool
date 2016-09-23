@@ -20,11 +20,17 @@ import ru.gdgkazan.marvel.R;
 import ru.gdgkazan.marvel.content.comics.Comics;
 import ru.gdgkazan.marvel.general.LoadingDialog;
 import ru.gdgkazan.marvel.general.LoadingView;
+import ru.gdgkazan.marvel.screen.common.CommonAdapter;
+import ru.gdgkazan.marvel.screen.common.CommonListView;
+import ru.gdgkazan.marvel.screen.common.CommonOnScrollListener;
+import ru.gdgkazan.marvel.widget.BaseAdapter;
 import ru.gdgkazan.marvel.widget.DividerItemDecoration;
 import ru.gdgkazan.marvel.widget.EmptyRecyclerView;
+import rx.Observable;
 
 
-public class ComicsListFragment extends Fragment implements ComicsView {
+public class ComicsListFragment extends Fragment implements CommonListView<Comics>,
+        BaseAdapter.OnItemClickListener<Comics> {
 
 
     @BindView(R.id.recyclerView)
@@ -35,7 +41,7 @@ public class ComicsListFragment extends Fragment implements ComicsView {
 
     private LoadingView mLoadingView;
 
-    private ComicsListAdapter mAdapter;
+    private CommonAdapter mAdapter;
 
     private ComicsListPresenter mPresenter;
 
@@ -60,13 +66,20 @@ public class ComicsListFragment extends Fragment implements ComicsView {
         getActivity().setTitle(getString(R.string.comics));
 
         mLoadingView = LoadingDialog.view(getChildFragmentManager());
-
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        mRecyclerView.setLayoutManager(layoutManager);
         mRecyclerView.addItemDecoration(new DividerItemDecoration(getActivity()));
         mRecyclerView.setEmptyView(mEmptyView);
+        mRecyclerView.addOnScrollListener(new CommonOnScrollListener<Comics>(layoutManager, this) {
+            @Override
+            public Observable<List<Comics>> loadMoreItems(int page) {
+                return mPresenter.loadMoreItems(page);
+            }
+        });
 
-        mAdapter = new ComicsListAdapter(new ArrayList<>());
+        mAdapter = getAdapter();
         mAdapter.attachToRecyclerView(mRecyclerView);
+        mAdapter.setOnItemClickListener(this);
 
         LifecycleHandler lifecycleHandler = LoaderLifecycleHandler.create(getActivity(), getLoaderManager());
         mPresenter = new ComicsListPresenter(lifecycleHandler, this);
@@ -74,17 +87,19 @@ public class ComicsListFragment extends Fragment implements ComicsView {
         return view;
     }
 
+    private CommonAdapter getAdapter() {
+        return new CommonAdapter<Comics>(new ArrayList<>());
+    }
+
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
     }
 
-
     @Override
     public void onDetach() {
         super.onDetach();
     }
-
 
     @Override
     public void showLoading() {
@@ -97,8 +112,13 @@ public class ComicsListFragment extends Fragment implements ComicsView {
     }
 
     @Override
-    public void showComics(@NonNull List<Comics> comics) {
+    public void showItems(@NonNull List<Comics> comics) {
         mAdapter.changeDataSet(comics);
+    }
+
+    @Override
+    public void addMoreItems(List<Comics> items) {
+        mAdapter.addAll(items);
     }
 
     @Override
@@ -106,4 +126,13 @@ public class ComicsListFragment extends Fragment implements ComicsView {
         mAdapter.clear();
     }
 
+    @Override
+    public void showDetails(Comics item) {
+        //show something
+    }
+
+    @Override
+    public void onItemClick(@NonNull Comics comics) {
+        mPresenter.onItemClick(comics);
+    }
 }

@@ -6,11 +6,12 @@ import io.realm.RealmList;
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 import ru.gdgkazan.marvel.content.Image;
+import ru.gdgkazan.marvel.screen.common.ListItem;
 
 /**
  * Created by aydar on 17.09.16.
  */
-public class Comics extends RealmObject {
+public class Comics extends RealmObject implements ListItem {
 
     @PrimaryKey
     @SerializedName("id")
@@ -34,6 +35,7 @@ public class Comics extends RealmObject {
     public Comics() {
     }
 
+    @Override
     public Long getId() {
         return mId;
     }
@@ -80,5 +82,23 @@ public class Comics extends RealmObject {
 
     public void setImages(RealmList<Image> images) {
         mImages = images;
+    }
+
+    @Override
+    public String getName() {
+        return getTitle();
+    }
+
+    @Override
+    public String getDescription() {
+        if (!getTextObjects().isEmpty()){
+            return getTextObjects().get(0).getText();
+        }
+        return "";
+    }
+
+    @Override
+    public Image getImage() {
+        return mImages.get(0);
     }
 }

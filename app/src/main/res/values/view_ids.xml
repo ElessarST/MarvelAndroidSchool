@@ -6,8 +6,4 @@
     <item name="recyclerView" type="id"/>
     <item name="empty" type="id"/>
 
-    <!-- comics items -->
-    <item name="comics_name" type="id"/>
-    <item name="comics_description" type="id"/>
-
 </resources>

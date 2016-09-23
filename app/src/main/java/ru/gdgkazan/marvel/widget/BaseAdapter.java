@@ -45,10 +45,17 @@ public abstract class BaseAdapter<VH extends RecyclerView.ViewHolder, T> extends
         refreshRecycler();
     }
 
-    public final void changeDataSet(@NonNull List<T> values) {
+    public final void changeDataSet(@NonNull List<? extends T> values) {
         mItems.clear();
         mItems.addAll(values);
         refreshRecycler();
+    }
+
+    public final void addAll(@NonNull List<? extends T> values) {
+        for (T value : values) {
+            mItems.add(value);
+            notifyItemInserted(mItems.size() - 1);
+        }
     }
 
     public final void clear() {
@@ -87,6 +94,12 @@ public abstract class BaseAdapter<VH extends RecyclerView.ViewHolder, T> extends
     public interface OnItemClickListener<T> {
 
         void onItemClick(@NonNull T item);
+
+    }
+
+    public interface onScrollListener<T> {
+
+        void loadMore(int page);
 
     }
 

@@ -2,7 +2,9 @@ package ru.gdgkazan.marvel.repository;
 
 import android.support.annotation.NonNull;
 
-import ru.gdgkazan.marvel.content.comics.ComicsResponseData;
+import java.util.List;
+
+import ru.gdgkazan.marvel.content.comics.Comics;
 import rx.Observable;
 
 /**
@@ -11,6 +13,6 @@ import rx.Observable;
 public interface ComicsRepository {
 
     @NonNull
-    Observable<ComicsResponseData> comics(Long offset, Long limit);
+    Observable<List<Comics>> comics(Long offset, Long limit);
 
 }
