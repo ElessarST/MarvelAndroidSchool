@@ -2,7 +2,9 @@ package ru.gdgkazan.marvel.test;
 
 import android.support.annotation.NonNull;
 
-import ru.gdgkazan.marvel.content.comics.ComicsResponseData;
+import java.util.List;
+
+import ru.gdgkazan.marvel.content.comics.Comics;
 import ru.gdgkazan.marvel.repository.ComicsRepository;
 import rx.Observable;
 
@@ -13,8 +15,13 @@ public class TestComicsRepository implements ComicsRepository {
 
     @NonNull
     @Override
-    public Observable<ComicsResponseData> comics(Long offset, Long limit) {
+    public Observable<List<Comics>> comics(Long offset, Long limit) {
         return Observable.empty();
+    }
+
+    @Override
+    public Observable<Comics> comics(Long id) {
+        return null;
     }
 }
 

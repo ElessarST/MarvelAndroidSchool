@@ -7,11 +7,13 @@ import org.junit.Test;
 import org.mockito.Mockito;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
-import io.realm.RealmList;
 import ru.arturvasilov.rxloader.LifecycleHandler;
-import ru.gdgkazan.marvel.content.comics.ComicsResponseData;
+import ru.gdgkazan.marvel.content.comics.Comics;
 import ru.gdgkazan.marvel.repository.RepositoryProvider;
+import ru.gdgkazan.marvel.screen.common.CommonListView;
 import ru.gdgkazan.marvel.test.MockLifecycleHandler;
 import ru.gdgkazan.marvel.test.TestComicsRepository;
 import rx.Observable;
@@ -21,13 +23,13 @@ import rx.Observable;
  */
 public class ComicsListPresenterTest {
 
-    private ComicsView mView;
+    private CommonListView<Comics> mView;
     private ComicsListPresenter mPresenter;
 
     @Before
     public void setUp() throws Exception {
         LifecycleHandler lifecycleHandler = new MockLifecycleHandler();
-        mView = Mockito.mock(ComicsView.class);
+        mView = Mockito.mock(CommonListView.class);
 
         mPresenter = new ComicsListPresenter(lifecycleHandler, mView);
     }
@@ -35,8 +37,8 @@ public class ComicsListPresenterTest {
 
     @Test
     public void testInitError() throws Exception {
-        ComicsResponseData responseData = new ComicsResponseData();
-        RepositoryProvider.setComicsRepository(new TestRepository(true, responseData));
+        List<Comics> comicses = new ArrayList<>();
+        RepositoryProvider.setComicsRepository(new TestRepository(true, comicses));
         mPresenter.init();
         Mockito.verify(mView).showLoading();
         Mockito.verify(mView).hideLoading();
@@ -45,27 +47,26 @@ public class ComicsListPresenterTest {
 
     @Test
     public void testInitSuccess() throws Exception {
-        ComicsResponseData responseData = new ComicsResponseData();
-        responseData.setResults(new RealmList<>());
-        RepositoryProvider.setComicsRepository(new TestRepository(false, responseData));
+        List<Comics> comicses = new ArrayList<>();
+        RepositoryProvider.setComicsRepository(new TestRepository(false, comicses));
         mPresenter.init();
         Mockito.verify(mView).showLoading();
         Mockito.verify(mView).hideLoading();
-        Mockito.verify(mView).showComics(responseData.getResults());
+        Mockito.verify(mView).showItems(comicses);
     }
 
     private class TestRepository extends TestComicsRepository {
         private boolean error;
-        private ComicsResponseData comics;
+        private List<Comics> comics;
 
-        public TestRepository(boolean error, ComicsResponseData comics) {
+        public TestRepository(boolean error, List<Comics> comics) {
             this.error = error;
             this.comics = comics;
         }
 
         @NonNull
         @Override
-        public Observable<ComicsResponseData> comics(Long offset, Long limit){
+        public Observable<List<Comics>> comics(Long offset, Long limit){
             if (this.error){
                 return Observable.error(new IOException());
             } else {

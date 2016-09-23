@@ -18,7 +18,7 @@ import rx.Observable;
  */
 public class DefaultComicsRepository implements ComicsRepository {
 
-    private static final String DEFAULT_COMICS_SORT = "-modified";
+    private static final String DEFAULT_COMICS_SORT = "-onsaleDate";
 
     @NonNull
     @Override
@@ -29,6 +29,16 @@ public class DefaultComicsRepository implements ComicsRepository {
                 .map(ComicsResponseData::getResults)
                 .flatMap(new RealmRewriteCache<>(Comics.class))
                 .onErrorResumeNext(new RealmCacheErrorHandler<>(Comics.class))
+                .compose(RxUtils.async());
+    }
+
+    @Override
+    public Observable<Comics> comics(Long id) {
+        return ApiFactory.getComicsService()
+                .comics(id)
+                .map(ComicsResponse::getData)
+                .map(ComicsResponseData::getResults)
+                .map(c -> c.get(0))
                 .compose(RxUtils.async());
     }
 }
