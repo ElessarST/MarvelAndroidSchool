@@ -20,6 +20,7 @@ import ru.gdgkazan.marvel.R;
 import ru.gdgkazan.marvel.content.comics.Comics;
 import ru.gdgkazan.marvel.general.LoadingDialog;
 import ru.gdgkazan.marvel.general.LoadingView;
+import ru.gdgkazan.marvel.screen.common.CommonAdapter;
 import ru.gdgkazan.marvel.widget.DividerItemDecoration;
 import ru.gdgkazan.marvel.widget.EmptyRecyclerView;
 
@@ -35,7 +36,7 @@ public class ComicsListFragment extends Fragment implements ComicsView {
 
     private LoadingView mLoadingView;
 
-    private ComicsListAdapter mAdapter;
+    private CommonAdapter mAdapter;
 
     private ComicsListPresenter mPresenter;
 
@@ -65,7 +66,7 @@ public class ComicsListFragment extends Fragment implements ComicsView {
         mRecyclerView.addItemDecoration(new DividerItemDecoration(getActivity()));
         mRecyclerView.setEmptyView(mEmptyView);
 
-        mAdapter = new ComicsListAdapter(new ArrayList<>());
+        mAdapter = getAdapter();
         mAdapter.attachToRecyclerView(mRecyclerView);
 
         LifecycleHandler lifecycleHandler = LoaderLifecycleHandler.create(getActivity(), getLoaderManager());
@@ -74,17 +75,19 @@ public class ComicsListFragment extends Fragment implements ComicsView {
         return view;
     }
 
+    private CommonAdapter getAdapter() {
+        return new CommonAdapter(new ArrayList<>());
+    }
+
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
     }
 
-
     @Override
     public void onDetach() {
         super.onDetach();
     }
-
 
     @Override
     public void showLoading() {
