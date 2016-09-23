@@ -3,4 +3,5 @@
     <item name="comics_request" type="id"/>
     <item name="events_request" type="id"/>
     <item name="comics_request_more" type="id"/>
+    <item name="events_request_more" type="id"/>
 </resources>

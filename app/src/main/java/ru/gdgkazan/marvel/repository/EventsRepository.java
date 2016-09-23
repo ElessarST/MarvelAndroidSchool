@@ -2,6 +2,9 @@ package ru.gdgkazan.marvel.repository;
 
 import android.support.annotation.NonNull;
 
+import java.util.List;
+
+import ru.gdgkazan.marvel.content.event.Event;
 import ru.gdgkazan.marvel.content.event.EventsResponseData;
 import rx.Observable;
 
@@ -11,5 +14,5 @@ import rx.Observable;
 public interface EventsRepository {
 
     @NonNull
-    Observable<EventsResponseData> events(Long offset, Long limit);
+    Observable<List<Event>> events(Long offset, Long limit);
 }

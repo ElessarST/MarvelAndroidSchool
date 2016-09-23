@@ -18,14 +18,20 @@ import butterknife.ButterKnife;
 import ru.arturvasilov.rxloader.LifecycleHandler;
 import ru.arturvasilov.rxloader.LoaderLifecycleHandler;
 import ru.gdgkazan.marvel.R;
+import ru.gdgkazan.marvel.content.comics.Comics;
 import ru.gdgkazan.marvel.content.event.Event;
 import ru.gdgkazan.marvel.general.LoadingDialog;
 import ru.gdgkazan.marvel.general.LoadingView;
 import ru.gdgkazan.marvel.screen.common.CommonAdapter;
+import ru.gdgkazan.marvel.screen.common.CommonListView;
+import ru.gdgkazan.marvel.screen.common.CommonOnScrollListener;
+import ru.gdgkazan.marvel.widget.BaseAdapter;
 import ru.gdgkazan.marvel.widget.DividerItemDecoration;
 import ru.gdgkazan.marvel.widget.EmptyRecyclerView;
+import rx.Observable;
 
-public class EventsListFragment extends Fragment implements EventsView{
+public class EventsListFragment extends Fragment implements CommonListView<Event>,
+        BaseAdapter.OnItemClickListener<Event>{
 
     @BindView(R.id.recyclerView)
     EmptyRecyclerView mRecyclerView;
@@ -70,13 +76,7 @@ public class EventsListFragment extends Fragment implements EventsView{
 
         mLoadingView = LoadingDialog.view(getChildFragmentManager());
 
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        mRecyclerView.addItemDecoration(new DividerItemDecoration(getActivity()));
-        mRecyclerView.setEmptyView(mEmptyView);
-
-
-        mAdapter = getAdapter();
-        mAdapter.attachToRecyclerView(mRecyclerView);
+        initRecycler();
 
         LifecycleHandler lifecycleHandler = LoaderLifecycleHandler.create(getActivity(), getLoaderManager());
         mPresenter = new EventsListPresenter(lifecycleHandler, this);
@@ -84,18 +84,45 @@ public class EventsListFragment extends Fragment implements EventsView{
         return view;
     }
 
+    private void initRecycler() {
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        mRecyclerView.setLayoutManager(layoutManager);
+        mRecyclerView.addItemDecoration(new DividerItemDecoration(getActivity()));
+        mRecyclerView.setEmptyView(mEmptyView);
+        mRecyclerView.addOnScrollListener(new CommonOnScrollListener<Event>(layoutManager, this) {
+            @Override
+            public Observable<List<Event>> loadMoreItems(int page) {
+                return mPresenter.loadMoreItems(page);
+            }
+        });
+
+        mAdapter = getAdapter();
+        mAdapter.attachToRecyclerView(mRecyclerView);
+        mAdapter.setOnItemClickListener(this);
+    }
+
     private CommonAdapter getAdapter() {
-        return new CommonAdapter(new ArrayList<>());
+        return new CommonAdapter<>(new ArrayList<>());
     }
 
     @Override
-    public void showEvents(@NonNull List<Event> events) {
-            mAdapter.changeDataSet(events);
+    public void showItems(@NonNull List<Event> events) {
+        mAdapter.changeDataSet(events);
+    }
+
+    @Override
+    public void addMoreItems(List<Event> items) {
+        mAdapter.addAll(items);
     }
 
     @Override
     public void showError() {
         mAdapter.clear();
+    }
+
+    @Override
+    public void showDetails(Event item) {
+
     }
 
     @Override
@@ -106,5 +133,10 @@ public class EventsListFragment extends Fragment implements EventsView{
     @Override
     public void hideLoading() {
         mLoadingView.hideLoading();
+    }
+
+    @Override
+    public void onItemClick(@NonNull Event item) {
+        mPresenter.onItemClick(item);
     }
 }
