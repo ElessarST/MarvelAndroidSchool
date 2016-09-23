@@ -4,7 +4,9 @@ import android.support.annotation.NonNull;
 
 import ru.arturvasilov.rxloader.LifecycleHandler;
 import ru.gdgkazan.marvel.R;
+import ru.gdgkazan.marvel.content.comics.CharactersAndEvents;
 import ru.gdgkazan.marvel.repository.RepositoryProvider;
+import rx.Observable;
 
 /**
  * Created by aydar on 23.09.16.
@@ -30,4 +32,14 @@ public class ComicsPresenter {
                 .subscribe(mView::showComics, throwable -> mView.showError());
     }
 
+    public void loadCharactersAndEvents(long id) {
+        Observable.zip(
+                RepositoryProvider.provideComicsRepository().characters(id),
+                RepositoryProvider.provideComicsRepository().events(id),
+                CharactersAndEvents::new)
+                .doOnSubscribe(mView::showAdditionalLoading)
+                .doOnTerminate(mView::hideAdditionalLoading)
+                .subscribe(mView::showEventsAndCharacters, throwable -> mView.showError());
+
+    }
 }

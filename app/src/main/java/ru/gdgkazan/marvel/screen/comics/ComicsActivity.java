@@ -10,10 +10,16 @@ import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.transition.Slide;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -21,11 +27,17 @@ import ru.arturvasilov.rxloader.LifecycleHandler;
 import ru.arturvasilov.rxloader.LoaderLifecycleHandler;
 import ru.gdgkazan.marvel.R;
 import ru.gdgkazan.marvel.content.Image;
+import ru.gdgkazan.marvel.content.comics.CharactersAndEvents;
 import ru.gdgkazan.marvel.content.comics.Comics;
 import ru.gdgkazan.marvel.content.comics.ComicsTextObject;
+import ru.gdgkazan.marvel.content.event.Event;
 import ru.gdgkazan.marvel.general.LoadingDialog;
 import ru.gdgkazan.marvel.general.LoadingView;
+import ru.gdgkazan.marvel.screen.common.CommonAdapter;
+import ru.gdgkazan.marvel.screen.common.ListItem;
 import ru.gdgkazan.marvel.util.Images;
+import ru.gdgkazan.marvel.widget.DividerItemDecoration;
+import ru.gdgkazan.marvel.widget.EmptyRecyclerView;
 
 public class ComicsActivity extends AppCompatActivity implements ComicsView{
 
@@ -48,6 +60,28 @@ public class ComicsActivity extends AppCompatActivity implements ComicsView{
 
     @BindView(R.id.pages)
     TextView mPages;
+
+    @BindView(R.id.progress_loader)
+    ProgressBar mProgressBar;
+
+    @BindView(R.id.events_layout)
+    RelativeLayout eventsLayout;
+
+    @BindView(R.id.characters_layout)
+    RelativeLayout charactersLayout;
+
+    @BindView(R.id.events_view)
+    RecyclerView eventsRecycler;
+
+    @BindView(R.id.characters_view)
+    RecyclerView charactersRecycler;
+
+    @BindView(R.id.events_empty)
+    TextView eventsEmpty;
+
+    @BindView(R.id.characters_empty)
+    TextView charactersEmpty;
+
 
     private ComicsPresenter mPresenter;
 
@@ -81,7 +115,21 @@ public class ComicsActivity extends AppCompatActivity implements ComicsView{
 
         LifecycleHandler lifecycleHandler = LoaderLifecycleHandler.create(this, getSupportLoaderManager());
         mPresenter = new ComicsPresenter(lifecycleHandler, this);
-        mPresenter.init(getIntent().getLongExtra(COMICS_ID_KEY, 0));
+        long id = getIntent().getLongExtra(COMICS_ID_KEY, 0);
+        mPresenter.init(id);
+        initRecyclers();
+    }
+
+    private void initRecyclers() {
+    }
+
+    private <T extends ListItem> void initRecycler(EmptyRecyclerView recyclerView,
+                                                   TextView emptyView) {
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.addItemDecoration(new DividerItemDecoration(this));
+        recyclerView.setEmptyView(emptyView);
+
     }
 
     @Override
@@ -96,7 +144,7 @@ public class ComicsActivity extends AppCompatActivity implements ComicsView{
 
     @Override
     public void showError() {
-
+        Toast.makeText(this, R.string.some_error, Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -122,6 +170,27 @@ public class ComicsActivity extends AppCompatActivity implements ComicsView{
         }
 
         mPages.setText(String.valueOf(comics.getPageCount()));
+
+        mPresenter.loadCharactersAndEvents(comics.getId());
+
+    }
+
+    @Override
+    public void showAdditionalLoading() {
+        mProgressBar.setVisibility(View.VISIBLE);
+        eventsLayout.setVisibility(View.INVISIBLE);
+        charactersLayout.setVisibility(View.INVISIBLE);
+    }
+
+    @Override
+    public void hideAdditionalLoading() {
+        mProgressBar.setVisibility(View.INVISIBLE);
+        eventsLayout.setVisibility(View.VISIBLE);
+        charactersLayout.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void showEventsAndCharacters(CharactersAndEvents data) {
 
     }
 
