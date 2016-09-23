@@ -41,7 +41,7 @@ public class ComicsListFragment extends Fragment implements CommonListView<Comic
 
     private LoadingView mLoadingView;
 
-    private CommonAdapter mAdapter;
+    private CommonAdapter<Comics> mAdapter;
 
     private ComicsListPresenter mPresenter;
 
@@ -66,6 +66,16 @@ public class ComicsListFragment extends Fragment implements CommonListView<Comic
         getActivity().setTitle(getString(R.string.comics));
 
         mLoadingView = LoadingDialog.view(getChildFragmentManager());
+
+        initRecycler();
+
+        LifecycleHandler lifecycleHandler = LoaderLifecycleHandler.create(getActivity(), getLoaderManager());
+        mPresenter = new ComicsListPresenter(lifecycleHandler, this);
+        mPresenter.init();
+        return view;
+    }
+
+    private void initRecycler() {
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         mRecyclerView.setLayoutManager(layoutManager);
         mRecyclerView.addItemDecoration(new DividerItemDecoration(getActivity()));
@@ -80,15 +90,10 @@ public class ComicsListFragment extends Fragment implements CommonListView<Comic
         mAdapter = getAdapter();
         mAdapter.attachToRecyclerView(mRecyclerView);
         mAdapter.setOnItemClickListener(this);
-
-        LifecycleHandler lifecycleHandler = LoaderLifecycleHandler.create(getActivity(), getLoaderManager());
-        mPresenter = new ComicsListPresenter(lifecycleHandler, this);
-        mPresenter.init();
-        return view;
     }
 
-    private CommonAdapter getAdapter() {
-        return new CommonAdapter<Comics>(new ArrayList<>());
+    private CommonAdapter<Comics> getAdapter() {
+        return new CommonAdapter<>(new ArrayList<>());
     }
 
     @Override

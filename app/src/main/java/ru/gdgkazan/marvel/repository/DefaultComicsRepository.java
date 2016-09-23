@@ -18,11 +18,13 @@ import rx.Observable;
  */
 public class DefaultComicsRepository implements ComicsRepository {
 
+    private static final String DEFAULT_COMICS_SORT = "-modified";
+
     @NonNull
     @Override
     public Observable<List<Comics>> comics(Long offset, Long limit) {
         return ApiFactory.getComicsService()
-                .comics(offset, limit)
+                .comics(offset, limit, DEFAULT_COMICS_SORT)
                 .map(ComicsResponse::getData)
                 .map(ComicsResponseData::getResults)
                 .flatMap(new RealmRewriteCache<>(Comics.class))

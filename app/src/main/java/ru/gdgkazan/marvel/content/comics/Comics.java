@@ -99,6 +99,10 @@ public class Comics extends RealmObject implements ListItem {
 
     @Override
     public Image getImage() {
-        return mImages.get(0);
+        if (!mImages.isEmpty()){
+            return mImages.get(0);
+        } else {
+            return null;
+        }
     }
 }
