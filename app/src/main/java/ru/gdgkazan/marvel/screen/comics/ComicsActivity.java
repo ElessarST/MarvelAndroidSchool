@@ -11,15 +11,16 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.transition.Slide;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -27,13 +28,17 @@ import ru.arturvasilov.rxloader.LifecycleHandler;
 import ru.arturvasilov.rxloader.LoaderLifecycleHandler;
 import ru.gdgkazan.marvel.R;
 import ru.gdgkazan.marvel.content.Image;
+import ru.gdgkazan.marvel.content.character.Character;
 import ru.gdgkazan.marvel.content.comics.CharactersAndEvents;
 import ru.gdgkazan.marvel.content.comics.Comics;
 import ru.gdgkazan.marvel.content.comics.ComicsTextObject;
+import ru.gdgkazan.marvel.content.event.Event;
 import ru.gdgkazan.marvel.general.LoadingDialog;
 import ru.gdgkazan.marvel.general.LoadingView;
+import ru.gdgkazan.marvel.screen.common.CommonAdapter;
 import ru.gdgkazan.marvel.screen.common.ListItem;
 import ru.gdgkazan.marvel.util.Images;
+import ru.gdgkazan.marvel.widget.BaseAdapter;
 import ru.gdgkazan.marvel.widget.DividerItemDecoration;
 import ru.gdgkazan.marvel.widget.EmptyRecyclerView;
 
@@ -63,23 +68,26 @@ public class ComicsActivity extends AppCompatActivity implements ComicsView{
     ProgressBar mProgressBar;
 
     @BindView(R.id.events_layout)
-    RelativeLayout eventsLayout;
+    LinearLayout mEventsLayout;
 
     @BindView(R.id.characters_layout)
-    RelativeLayout charactersLayout;
+    LinearLayout mCharactersLayout;
 
     @BindView(R.id.events_view)
-    RecyclerView eventsRecycler;
+    EmptyRecyclerView mEventsRecycler;
 
     @BindView(R.id.characters_view)
-    RecyclerView charactersRecycler;
+    EmptyRecyclerView mCharactersRecycler;
 
     @BindView(R.id.events_empty)
-    TextView eventsEmpty;
+    TextView mEventsEmpty;
 
     @BindView(R.id.characters_empty)
-    TextView charactersEmpty;
+    TextView mCharactersEmpty;
 
+    private CommonAdapter<Event> mEventsAdapter;
+
+    private CommonAdapter<Character> mCharactersAdapter;
 
     private ComicsPresenter mPresenter;
 
@@ -111,6 +119,7 @@ public class ComicsActivity extends AppCompatActivity implements ComicsView{
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
+
         LifecycleHandler lifecycleHandler = LoaderLifecycleHandler.create(this, getSupportLoaderManager());
         mPresenter = new ComicsPresenter(lifecycleHandler, this);
         long id = getIntent().getLongExtra(COMICS_ID_KEY, 0);
@@ -119,14 +128,26 @@ public class ComicsActivity extends AppCompatActivity implements ComicsView{
     }
 
     private void initRecyclers() {
+        mEventsAdapter = new CommonAdapter<>(new ArrayList<>());
+        mCharactersAdapter = new CommonAdapter<>(new ArrayList<>());
+        initRecycler(mEventsRecycler, mEventsEmpty, mEventsAdapter, item -> {
+            mPresenter.onEventClick(item);
+        });
+        initRecycler(mCharactersRecycler, mCharactersEmpty, mCharactersAdapter, item -> {
+            mPresenter.onCharacterClick(item);
+        });
     }
 
     private <T extends ListItem> void initRecycler(EmptyRecyclerView recyclerView,
-                                                   TextView emptyView) {
+                                                   TextView emptyView, CommonAdapter<T> adapter,
+                                                   BaseAdapter.OnItemClickListener<T> onClickListener) {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.addItemDecoration(new DividerItemDecoration(this));
         recyclerView.setEmptyView(emptyView);
+
+        adapter.attachToRecyclerView(recyclerView);
+        adapter.setOnItemClickListener(onClickListener);
 
     }
 
@@ -176,19 +197,30 @@ public class ComicsActivity extends AppCompatActivity implements ComicsView{
     @Override
     public void showAdditionalLoading() {
         mProgressBar.setVisibility(View.VISIBLE);
-        eventsLayout.setVisibility(View.INVISIBLE);
-        charactersLayout.setVisibility(View.INVISIBLE);
+        mEventsLayout.setVisibility(View.GONE);
+        mCharactersEmpty.setVisibility(View.GONE);
     }
 
     @Override
     public void hideAdditionalLoading() {
-        mProgressBar.setVisibility(View.INVISIBLE);
-        eventsLayout.setVisibility(View.VISIBLE);
-        charactersLayout.setVisibility(View.VISIBLE);
+        mProgressBar.setVisibility(View.GONE);
+        mEventsLayout.setVisibility(View.VISIBLE);
+        mCharactersLayout.setVisibility(View.VISIBLE);
     }
 
     @Override
     public void showEventsAndCharacters(CharactersAndEvents data) {
+        mCharactersAdapter.changeDataSet(data.getCharacters());
+        mEventsAdapter.changeDataSet(data.getEvents());
+    }
+
+    @Override
+    public void showEvent(Event item) {
+
+    }
+
+    @Override
+    public void showCharacter(Character item) {
 
     }
 

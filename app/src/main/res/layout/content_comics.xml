@@ -83,10 +83,12 @@
             android:visibility="visible"
             />
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/characters_layout">
+            android:id="@+id/characters_layout"
+            android:visibility="gone"
+            android:orientation="vertical">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -96,28 +98,34 @@
                 android:textColor="@color/colorPrimaryText"
                 android:textSize="@dimen/text.18"
                 android:text="@string/characters"/>
-
-            <ru.gdgkazan.marvel.widget.EmptyRecyclerView
-                android:id="@+id/characters_view"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:clipToPadding="false"
-                android:overScrollMode="never"/>
+                android:layout_height="wrap_content">
+                <ru.gdgkazan.marvel.widget.EmptyRecyclerView
+                    android:id="@+id/characters_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:overScrollMode="never"/>
 
-            <TextView
-                android:id="@+id/characters_empty"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="@string/empty_characters"
-                android:textColor="@color/error_text_color"
-                android:textSize="@dimen/text.15"/>
-        </RelativeLayout>
+                <TextView
+                    android:id="@+id/characters_empty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/empty_characters"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:textColor="@color/error_text_color"
+                    android:textSize="@dimen/text.15"/>
+            </RelativeLayout>
 
-        <RelativeLayout
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/events_layout">
+            android:id="@+id/events_layout"
+            android:visibility="gone"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -129,22 +137,26 @@
                 android:textSize="@dimen/text.18"
                 android:text="@string/events"/>
 
-            <ru.gdgkazan.marvel.widget.EmptyRecyclerView
-                android:id="@+id/events_view"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:clipToPadding="false"
-                android:overScrollMode="never"/>
+                android:layout_height="wrap_content">
+                <ru.gdgkazan.marvel.widget.EmptyRecyclerView
+                    android:id="@+id/events_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:overScrollMode="never"/>
 
-            <TextView
-                android:id="@+id/events_empty"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="@string/empty_events"
-                android:textColor="@color/error_text_color"
-                android:textSize="@dimen/text.15"/>
-        </RelativeLayout>
+                <TextView
+                    android:id="@+id/events_empty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:text="@string/empty_events"
+                    android:textColor="@color/error_text_color"
+                    android:textSize="@dimen/text.15"/>
+            </RelativeLayout>
+        </LinearLayout>
 
     </LinearLayout>
 

@@ -25,7 +25,6 @@
     <string name="price">Price:</string>
     <string name="price_format">%s$</string>
     <string name="pages">Pages:</string>
-    <string name="empty_characters">Characters not found</string>
-    <string name="empty_events">Events not found</string>
+    <string name="empty_characters">characters not found</string>
     <string name="some_error">Error</string>
 </resources>

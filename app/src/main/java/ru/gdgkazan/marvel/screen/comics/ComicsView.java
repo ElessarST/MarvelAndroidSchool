@@ -1,7 +1,9 @@
 package ru.gdgkazan.marvel.screen.comics;
 
+import ru.gdgkazan.marvel.content.character.Character;
 import ru.gdgkazan.marvel.content.comics.CharactersAndEvents;
 import ru.gdgkazan.marvel.content.comics.Comics;
+import ru.gdgkazan.marvel.content.event.Event;
 import ru.gdgkazan.marvel.general.LoadingView;
 
 /**
@@ -19,4 +21,8 @@ public interface ComicsView extends LoadingView {
     void hideAdditionalLoading();
 
     void showEventsAndCharacters(CharactersAndEvents data);
+
+    void showEvent(Event item);
+
+    void showCharacter(Character item);
 }

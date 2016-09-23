@@ -4,7 +4,9 @@ import android.support.annotation.NonNull;
 
 import ru.arturvasilov.rxloader.LifecycleHandler;
 import ru.gdgkazan.marvel.R;
+import ru.gdgkazan.marvel.content.character.Character;
 import ru.gdgkazan.marvel.content.comics.CharactersAndEvents;
+import ru.gdgkazan.marvel.content.event.Event;
 import ru.gdgkazan.marvel.repository.RepositoryProvider;
 import rx.Observable;
 
@@ -41,5 +43,13 @@ public class ComicsPresenter {
                 .doOnTerminate(mView::hideAdditionalLoading)
                 .subscribe(mView::showEventsAndCharacters, throwable -> mView.showError());
 
+    }
+
+    public void onEventClick(Event item) {
+        mView.showEvent(item);
+    }
+
+    public void onCharacterClick(Character item) {
+        mView.showCharacter(item);
     }
 }
