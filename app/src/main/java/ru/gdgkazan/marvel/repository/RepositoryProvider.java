@@ -12,6 +12,8 @@ public final class RepositoryProvider {
 
     private static CharactersRepository sCharactersRepository;
 
+    private static EventsRepository sEventsRepository;
+
     private RepositoryProvider() {
     }
 
@@ -37,6 +39,18 @@ public final class RepositoryProvider {
 
     public static void setCharactersRepository(CharactersRepository charactersRepository) {
         sCharactersRepository = charactersRepository;
+    }
+
+    @NonNull
+    public static EventsRepository provideEventsRepository() {
+        if (sEventsRepository == null) {
+            sEventsRepository = new DefaultEventsRepository();
+        }
+        return sEventsRepository;
+    }
+
+    public static void setEventsRepository(EventsRepository eventsRepository) {
+        sEventsRepository = eventsRepository;
     }
 
     @MainThread
