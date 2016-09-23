@@ -18,13 +18,13 @@ import butterknife.ButterKnife;
 import ru.arturvasilov.rxloader.LifecycleHandler;
 import ru.arturvasilov.rxloader.LoaderLifecycleHandler;
 import ru.gdgkazan.marvel.R;
-import ru.gdgkazan.marvel.content.comics.Comics;
 import ru.gdgkazan.marvel.content.event.Event;
 import ru.gdgkazan.marvel.general.LoadingDialog;
 import ru.gdgkazan.marvel.general.LoadingView;
 import ru.gdgkazan.marvel.screen.common.CommonAdapter;
 import ru.gdgkazan.marvel.screen.common.CommonListView;
 import ru.gdgkazan.marvel.screen.common.CommonOnScrollListener;
+import ru.gdgkazan.marvel.screen.events.EventActivity;
 import ru.gdgkazan.marvel.widget.BaseAdapter;
 import ru.gdgkazan.marvel.widget.DividerItemDecoration;
 import ru.gdgkazan.marvel.widget.EmptyRecyclerView;
@@ -122,7 +122,7 @@ public class EventsListFragment extends Fragment implements CommonListView<Event
 
     @Override
     public void showDetails(Event item) {
-
+        EventActivity.start(getActivity(), item);
     }
 
     @Override

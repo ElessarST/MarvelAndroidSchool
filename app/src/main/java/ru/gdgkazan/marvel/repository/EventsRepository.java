@@ -15,4 +15,7 @@ public interface EventsRepository {
 
     @NonNull
     Observable<List<Event>> events(Long offset, Long limit);
+
+    @NonNull
+    Observable<Event> eventById(long id);
 }

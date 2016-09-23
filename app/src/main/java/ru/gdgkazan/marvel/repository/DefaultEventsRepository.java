@@ -29,4 +29,15 @@ public class DefaultEventsRepository implements EventsRepository {
                 .onErrorResumeNext(new RealmCacheErrorHandler<>(Event.class))
                 .compose(RxUtils.async());
     }
+
+    @NonNull
+    @Override
+    public Observable<Event> eventById(long id) {
+        return ApiFactory.getEventsService()
+                .eventById(id)
+                .map(EventsResponse::getData)
+                .map(EventsResponseData::getResults)
+                .map(events -> events.get(0))
+                .compose(RxUtils.async());
+    }
 }

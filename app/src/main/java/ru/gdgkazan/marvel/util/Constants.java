@@ -8,4 +8,8 @@ public interface Constants {
     Long PAGE_SIZE = 10L;
     Long ZERO_OFFSET = 0L;
 
+    String ID_KEY = "id";
+    String IMAGE_KEY = "image";
+    String NAME_KEY = "name";
+
 }

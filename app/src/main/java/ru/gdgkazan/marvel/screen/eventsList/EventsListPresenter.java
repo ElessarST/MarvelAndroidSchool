@@ -6,9 +6,7 @@ import java.util.List;
 
 import ru.arturvasilov.rxloader.LifecycleHandler;
 import ru.gdgkazan.marvel.R;
-import ru.gdgkazan.marvel.content.comics.Comics;
 import ru.gdgkazan.marvel.content.event.Event;
-import ru.gdgkazan.marvel.content.event.EventsResponseData;
 import ru.gdgkazan.marvel.repository.RepositoryProvider;
 import ru.gdgkazan.marvel.screen.common.CommonListView;
 import ru.gdgkazan.marvel.util.Constants;

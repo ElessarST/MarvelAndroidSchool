@@ -33,6 +33,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ru.gdgkazan.marvel.screen.MainActivity"/>
         </activity>
+        <activity
+            android:name=".screen.events.EventActivity"
+            android:label="@string/title_activity_event"
+            android:parentActivityName=".screen.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ru.gdgkazan.marvel.screen.MainActivity"/>
+        </activity>
     </application>
 
 </manifest>
