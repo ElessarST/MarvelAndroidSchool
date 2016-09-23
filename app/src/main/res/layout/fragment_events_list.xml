@@ -4,10 +4,21 @@
              android:layout_height="match_parent"
              tools:context=".screen.eventslist.EventsListFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ru.gdgkazan.marvel.widget.EmptyRecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment"/>
+        android:clipToPadding="false"
+        android:overScrollMode="never"/>
+
+    <TextView
+        android:id="@id/empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/empty_events"
+        android:textColor="@color/error_text_color"
+        android:textSize="@dimen/text.15"/>
+
 
 </FrameLayout>
