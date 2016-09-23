@@ -4,6 +4,7 @@ import android.support.annotation.NonNull;
 
 import ru.arturvasilov.rxloader.LifecycleHandler;
 import ru.gdgkazan.marvel.R;
+import ru.gdgkazan.marvel.content.event.Event;
 import ru.gdgkazan.marvel.content.event.EventsResponseData;
 import ru.gdgkazan.marvel.repository.RepositoryProvider;
 import ru.gdgkazan.marvel.util.Constants;
@@ -24,10 +25,10 @@ public class EventsListPresenter {
 
     public void init() {
         RepositoryProvider.provideEventsRepository()
-                .events(Constants.ZERO_OFFSET, Constants.DEFAULT_LIMIT)
+                .events(Constants.ZERO_OFFSET, Constants.PAGE_SIZE)
                 .doOnSubscribe(mView::showLoading)
                 .doOnTerminate(mView::hideLoading)
-                .compose(mLifecycleHandler.load(R.id.comics_request))
+                .compose(mLifecycleHandler.load(R.id.events_request))
                 .map(EventsResponseData::getResults)
                 .subscribe(mView::showEvents, throwable -> mView.showError());
     }

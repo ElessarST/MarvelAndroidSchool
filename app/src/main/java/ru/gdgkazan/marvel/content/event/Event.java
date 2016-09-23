@@ -8,11 +8,12 @@ import io.realm.RealmModel;
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 import ru.gdgkazan.marvel.content.Image;
+import ru.gdgkazan.marvel.screen.common.ListItem;
 
 /**
  * @author Olga Telezhnikova
  */
-public class Event extends RealmObject {
+public class Event extends RealmObject implements ListItem {
 
     @PrimaryKey
     @SerializedName("id")
@@ -34,13 +35,13 @@ public class Event extends RealmObject {
     * The date of publication of the first issue in this event
     */
     @SerializedName("start")
-    private Date mStart;
+    private String mStart;
 
      /*
     * The date of publication of the last issue in this event
     */
     @SerializedName("end")
-    private Date mEnd;
+    private String mEnd;
 
     /*
     The representative image for this event
@@ -64,6 +65,11 @@ public class Event extends RealmObject {
         this.mTitle = mTitle;
     }
 
+    @Override
+    public String getName() {
+        return getTitle();
+    }
+
     public String getDescription() {
         return mDescription;
     }
@@ -80,11 +86,11 @@ public class Event extends RealmObject {
         this.mResourceURI = mResourceURI;
     }
 
-    public Date getStart() {
+    public String getStart() {
         return mStart;
     }
 
-    public void setStart(Date mStart) {
+    public void setStart(String mStart) {
         this.mStart = mStart;
     }
 
@@ -96,11 +102,11 @@ public class Event extends RealmObject {
         this.mImage = mImage;
     }
 
-    public Date getEnd() {
+    public String getEnd() {
         return mEnd;
     }
 
-    public void setEnd(Date mEnd) {
+    public void setEnd(String mEnd) {
         this.mEnd = mEnd;
     }
 }
