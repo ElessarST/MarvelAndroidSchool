@@ -35,6 +35,7 @@ public class Comics extends RealmObject implements ListItem {
     public Comics() {
     }
 
+    @Override
     public Long getId() {
         return mId;
     }
@@ -90,8 +91,7 @@ public class Comics extends RealmObject implements ListItem {
 
     @Override
     public String getDescription() {
-        final int consoleWidth = 80;
-        return getTextObjects().get(0).getText().substring(consoleWidth);
+        return getTextObjects().get(0).getText();
     }
 
     @Override
