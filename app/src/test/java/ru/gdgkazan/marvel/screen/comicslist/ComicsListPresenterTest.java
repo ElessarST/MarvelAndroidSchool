@@ -45,7 +45,7 @@ public class ComicsListPresenterTest {
         mPresenter.init();
         Mockito.verify(mView).showLoading();
         Mockito.verify(mView).hideLoading();
-        Mockito.verify(mView).showError(new Throwable());
+        Mockito.verify(mView).showError();
     }
 
     @Test

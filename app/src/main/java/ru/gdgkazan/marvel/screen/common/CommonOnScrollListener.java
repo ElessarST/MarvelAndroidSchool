@@ -53,7 +53,7 @@ public abstract class CommonOnScrollListener<T extends ListItem> extends Recycle
                 .compose(RxUtils.async())
                 .subscribe(p ->  loadMoreItems(p)
                         .doOnTerminate(() -> mLoading = false)
-                        .subscribe(mView::addMoreItems, throwable -> mView.showError(throwable)));
+                        .subscribe(mView::addMoreItems, throwable -> mView.showError()));
 
     }
 

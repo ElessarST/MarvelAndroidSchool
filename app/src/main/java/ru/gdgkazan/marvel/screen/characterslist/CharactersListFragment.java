@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -128,8 +127,7 @@ public class CharactersListFragment extends Fragment
     }
 
     @Override
-    public void showError(Throwable throwable) {
-        Log.e("CharList", "Fail", throwable);
+    public void showError() {
         mAdapter.clear();
     }
 

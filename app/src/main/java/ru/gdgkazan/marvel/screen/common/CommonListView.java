@@ -16,7 +16,7 @@ public interface CommonListView<T> extends LoadingView {
 
     void addMoreItems(List<T> items);
 
-    void showError(Throwable throwable);
+    void showError();
 
     void showDetails(T item);
 

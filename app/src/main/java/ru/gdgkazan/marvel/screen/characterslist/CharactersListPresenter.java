@@ -29,7 +29,7 @@ public class CharactersListPresenter {
                 .doOnSubscribe(mView::showLoading)
                 .doOnTerminate(mView::hideLoading)
                 .compose(mLifecycleHandler.load(R.id.characters_request))
-                .subscribe(mView::showItems, throwable -> mView.showError(throwable));
+                .subscribe(mView::showItems, throwable -> mView.showError());
     }
 
     public Observable<List<Character>> loadMoreItems(int page) {
