@@ -13,7 +13,7 @@ import ru.gdgkazan.marvel.general.LoadingView;
 
 public interface EventsView extends LoadingView {
 
-    void showEvents(@NonNull List<Event> events);
+    void showEvents(@NonNull Event events);
 
     void showError();
 }

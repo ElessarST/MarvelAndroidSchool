@@ -3,6 +3,7 @@
 
     <string name="loading">Loading…</string>
     <string name="empty_comics">comics not found</string>
+    <string name="empty_events">events not found</string>
 
     <string name="title_activity_main">Marvel Universe</string>
 
@@ -18,7 +19,13 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_comics">ComicsActivity</string>
+    <string name="title_activity_event">EventActivity</string>
     <string name="action_settings">Settings</string>
     <string name="description">Description:</string>
     <string name="empty_characters">There are now characrters yet</string>
+    <string name="price">Price:</string>
+    <string name="price_format">%s$</string>
+    <string name="pages">Pages:</string>
+    <string name="empty_characters">characters not found</string>
+    <string name="some_error">Error</string>
 </resources>
