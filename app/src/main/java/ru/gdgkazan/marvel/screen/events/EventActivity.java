@@ -7,11 +7,15 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.transition.Slide;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -25,9 +29,15 @@ import ru.gdgkazan.marvel.content.Image;
 import ru.gdgkazan.marvel.content.event.Event;
 import ru.gdgkazan.marvel.general.LoadingDialog;
 import ru.gdgkazan.marvel.general.LoadingView;
+import ru.gdgkazan.marvel.screen.MainActivity;
+import ru.gdgkazan.marvel.screen.characterslist.CharactersListFragment;
+import ru.gdgkazan.marvel.screen.comicslist.ComicsListFragment;
+import ru.gdgkazan.marvel.screen.eventslist.EventsListFragment;
 import ru.gdgkazan.marvel.screen.eventslist.EventsView;
 import ru.gdgkazan.marvel.util.Constants;
 import ru.gdgkazan.marvel.util.Images;
+
+import static android.R.attr.id;
 
 
 /**
@@ -115,6 +125,17 @@ public class EventActivity extends AppCompatActivity implements EventsView {
             getWindow().setStatusBarColor(Color.TRANSPARENT);
             getWindow().setEnterTransition(transition);
             getWindow().setReturnTransition(transition);
+        }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
     }
 }

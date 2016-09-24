@@ -13,6 +13,7 @@ import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.transition.Slide;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -109,6 +110,17 @@ public class CharacterActivity extends AppCompatActivity implements CharacterVie
             getWindow().setStatusBarColor(Color.TRANSPARENT);
             getWindow().setEnterTransition(transition);
             getWindow().setReturnTransition(transition);
+        }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
     }
 
