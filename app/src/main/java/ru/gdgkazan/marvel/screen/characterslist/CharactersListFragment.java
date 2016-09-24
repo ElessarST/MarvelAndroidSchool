@@ -8,6 +8,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +21,7 @@ import ru.gdgkazan.marvel.R;
 import ru.gdgkazan.marvel.content.character.Character;
 import ru.gdgkazan.marvel.general.LoadingDialog;
 import ru.gdgkazan.marvel.general.LoadingView;
+import ru.gdgkazan.marvel.screen.character.CharacterActivity;
 import ru.gdgkazan.marvel.screen.common.CommonAdapter;
 import ru.gdgkazan.marvel.screen.common.CommonListView;
 import ru.gdgkazan.marvel.screen.common.CommonOnScrollListener;
@@ -30,7 +32,7 @@ import rx.Observable;
 
 public class CharactersListFragment extends Fragment
         implements CommonListView<Character>,
-        BaseAdapter.OnItemClickListener<Character>{
+        BaseAdapter.OnItemClickListener<Character> {
 
     @BindView(R.id.recyclerView)
     EmptyRecyclerView mRecyclerView;
@@ -128,11 +130,13 @@ public class CharactersListFragment extends Fragment
 
     @Override
     public void showError() {
+        Toast.makeText(getActivity(), R.string.some_error, Toast.LENGTH_LONG).show();
         mAdapter.clear();
     }
 
     @Override
     public void showDetails(Character item) {
+        CharacterActivity.start(getActivity(), item);
     }
 
     @Override

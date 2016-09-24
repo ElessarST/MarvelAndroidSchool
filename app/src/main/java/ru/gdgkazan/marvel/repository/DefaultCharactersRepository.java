@@ -31,4 +31,14 @@ public class DefaultCharactersRepository implements CharactersRepository {
 
     }
 
+    @Override
+    public Observable<Character> characterById(long id) {
+        return ApiFactory.getCharactersService()
+                .characterById(id)
+                .map(CharactersResponse::getData)
+                .map(CharactersResponseData::getResults)
+                .map(characters -> characters.get(0))
+                .compose(RxUtils.async());
+    }
+
 }

@@ -12,4 +12,6 @@ public interface CharactersRepository {
 
     @NonNull
     Observable<List<Character>> characters(Long offset, Long limit);
+
+    Observable<Character> characterById(long id);
 }

@@ -3,12 +3,14 @@ package ru.gdgkazan.marvel.content.character;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
+
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 import ru.gdgkazan.marvel.content.Image;
 import ru.gdgkazan.marvel.screen.common.ListItem;
 
-public class Character extends RealmObject implements ListItem{
+public class Character extends RealmObject implements ListItem, Serializable{
 
     @PrimaryKey
     @SerializedName("id")
