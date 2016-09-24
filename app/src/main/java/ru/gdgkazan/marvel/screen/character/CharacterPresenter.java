@@ -7,7 +7,7 @@ import java.io.Serializable;
 import ru.gdgkazan.marvel.content.character.Character;
 
 /**
- * @author Olga Telezhnikova
+ * @author Artur Badretdinov
  */
 public class CharacterPresenter {
 
