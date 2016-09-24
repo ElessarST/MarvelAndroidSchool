@@ -1,0 +1,130 @@
+{
+  "code": 200,
+  "status": "Ok",
+  "copyright": "© 2016 MARVEL",
+  "attributionText": "Data provided by Marvel. © 2016 MARVEL",
+  "attributionHTML": "<a href=\"http://marvel.com\">Data provided by Marvel. © 2016 MARVEL</a>",
+  "etag": "85ae64ba6fd59d87812db3121fb33e7b9f23f9a2",
+  "data": {
+    "offset": 0,
+    "limit": 1,
+    "total": 37834,
+    "count": 1,
+    "results": [
+      {
+        "id": 60904,
+        "digitalId": 0,
+        "title": "Wolverine: Old Man Logan (Hardcover)",
+        "issueNumber": 0,
+        "variantDescription": "",
+        "description": "A future world savaged and sundered by super villains, the United States ain’t what it used to be. In California, now a wasteland controlled by the evil Hulk Gang, the former Wolverine seeks to live in peace. He’s retired, finally free from the violence of his former existence as an X-Man, and he wants to keep it that way. If only they’d let him. Now, Logan and an aged, blind Hawkeye are forced into a cross-country jaunt through villain-ruled lands, on a collision course with the worst of them all! Can Old Man Logan maintain his pacifist vow and make his last stand without doing what he does best? Mark Millar and Steve McNiven unite for a riotous romp through a future world of death, despair and dynamic action! Collecting WOLVERINE (2003) #66-72 and WOLVERINE: OLD MAN LOGAN GIANT-SIZE.",
+        "modified": "2016-08-02T11:56:03-0400",
+        "isbn": "978-1-302-90463-0",
+        "upc": "",
+        "diamondCode": "",
+        "ean": "9781302 904630 53499",
+        "issn": "",
+        "format": "Hardcover",
+        "pageCount": 224,
+        "textObjects": [
+          {
+            "type": "issue_solicit_text",
+            "language": "en-us",
+            "text": "A future world savaged and sundered by super villains, the United States ain’t what it used to be. In California, now a wasteland controlled by the evil Hulk Gang, the former Wolverine seeks to live in peace. He’s retired, finally free from the violence of his former existence as an X-Man, and he wants to keep it that way. If only they’d let him. Now, Logan and an aged, blind Hawkeye are forced into a cross-country jaunt through villain-ruled lands, on a collision course with the worst of them all! Can Old Man Logan maintain his pacifist vow and make his last stand without doing what he does best? Mark Millar and Steve McNiven unite for a riotous romp through a future world of death, despair and dynamic action! Collecting WOLVERINE (2003) #66-72 and WOLVERINE: OLD MAN LOGAN GIANT-SIZE."
+          }
+        ],
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/60904",
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/comics/collection/60904/wolverine_old_man_logan_hardcover?utm_campaign=apiRef&utm_source=416a785de25526453ade51c255b4f3f5"
+          }
+        ],
+        "series": {
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/22473",
+          "name": "Wolverine: Old Man Logan (2017 - Present)"
+        },
+        "variants": [],
+        "collections": [],
+        "collectedIssues": [],
+        "dates": [
+          {
+            "type": "onsaleDate",
+            "date": "2017-02-01T00:00:00-0500"
+          },
+          {
+            "type": "focDate",
+            "date": "2016-12-13T00:00:00-0500"
+          }
+        ],
+        "prices": [
+          {
+            "type": "printPrice",
+            "price": 34.99
+          }
+        ],
+        "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/00/57a0c306ee5a6",
+          "extension": "jpg"
+        },
+        "images": [
+          {
+            "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/00/57a0c306ee5a6",
+            "extension": "jpg"
+          }
+        ],
+        "creators": {
+          "available": 3,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/60904/creators",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/9484",
+              "name": "Steve McNiven",
+              "role": "penciller (cover)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/88",
+              "name": "Mark Millar",
+              "role": "writer"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/4430",
+              "name": "Jeff Youngquist",
+              "role": "editor"
+            }
+          ],
+          "returned": 3
+        },
+        "characters": {
+          "available": 0,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/60904/characters",
+          "items": [],
+          "returned": 0
+        },
+        "stories": {
+          "available": 2,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/60904/stories",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/132275",
+              "name": "cover from Wolverine: Old Man Logan (2017)",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/132276",
+              "name": "story from Wolverine: Old Man Logan (2017)",
+              "type": "interiorStory"
+            }
+          ],
+          "returned": 2
+        },
+        "events": {
+          "available": 0,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/60904/events",
+          "items": [],
+          "returned": 0
+        }
+      }
+    ]
+  }
+}

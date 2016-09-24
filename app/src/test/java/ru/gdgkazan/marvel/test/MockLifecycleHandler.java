@@ -6,7 +6,7 @@ import ru.arturvasilov.rxloader.LifecycleHandler;
 import rx.Observable;
 
 /**
- * @author Artur Vasilov
+ * @author Aydar Farrakhov
  */
 public class MockLifecycleHandler implements LifecycleHandler {
 

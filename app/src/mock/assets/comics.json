@@ -1,0 +1,1221 @@
+{
+  "code": 200,
+  "status": "Ok",
+  "copyright": "© 2016 MARVEL",
+  "attributionText": "Data provided by Marvel. © 2016 MARVEL",
+  "attributionHTML": "<a href=\"http://marvel.com\">Data provided by Marvel. © 2016 MARVEL</a>",
+  "etag": "85ae64ba6fd59d87812db3121fb33e7b9f23f9a2",
+  "data": {
+    "offset": 10,
+    "limit": 10,
+    "total": 37834,
+    "count": 10,
+    "results": [
+      {
+        "id": 60904,
+        "digitalId": 0,
+        "title": "Wolverine: Old Man Logan (Hardcover)",
+        "issueNumber": 0,
+        "variantDescription": "",
+        "description": "A future world savaged and sundered by super villains, the United States ain’t what it used to be. In California, now a wasteland controlled by the evil Hulk Gang, the former Wolverine seeks to live in peace. He’s retired, finally free from the violence of his former existence as an X-Man, and he wants to keep it that way. If only they’d let him. Now, Logan and an aged, blind Hawkeye are forced into a cross-country jaunt through villain-ruled lands, on a collision course with the worst of them all! Can Old Man Logan maintain his pacifist vow and make his last stand without doing what he does best? Mark Millar and Steve McNiven unite for a riotous romp through a future world of death, despair and dynamic action! Collecting WOLVERINE (2003) #66-72 and WOLVERINE: OLD MAN LOGAN GIANT-SIZE.",
+        "modified": "2016-08-02T11:56:03-0400",
+        "isbn": "978-1-302-90463-0",
+        "upc": "",
+        "diamondCode": "",
+        "ean": "9781302 904630 53499",
+        "issn": "",
+        "format": "Hardcover",
+        "pageCount": 224,
+        "textObjects": [
+          {
+            "type": "issue_solicit_text",
+            "language": "en-us",
+            "text": "A future world savaged and sundered by super villains, the United States ain’t what it used to be. In California, now a wasteland controlled by the evil Hulk Gang, the former Wolverine seeks to live in peace. He’s retired, finally free from the violence of his former existence as an X-Man, and he wants to keep it that way. If only they’d let him. Now, Logan and an aged, blind Hawkeye are forced into a cross-country jaunt through villain-ruled lands, on a collision course with the worst of them all! Can Old Man Logan maintain his pacifist vow and make his last stand without doing what he does best? Mark Millar and Steve McNiven unite for a riotous romp through a future world of death, despair and dynamic action! Collecting WOLVERINE (2003) #66-72 and WOLVERINE: OLD MAN LOGAN GIANT-SIZE."
+          }
+        ],
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/60904",
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/comics/collection/60904/wolverine_old_man_logan_hardcover?utm_campaign=apiRef&utm_source=416a785de25526453ade51c255b4f3f5"
+          }
+        ],
+        "series": {
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/22473",
+          "name": "Wolverine: Old Man Logan (2017 - Present)"
+        },
+        "variants": [],
+        "collections": [],
+        "collectedIssues": [],
+        "dates": [
+          {
+            "type": "onsaleDate",
+            "date": "2017-02-01T00:00:00-0500"
+          },
+          {
+            "type": "focDate",
+            "date": "2016-12-13T00:00:00-0500"
+          }
+        ],
+        "prices": [
+          {
+            "type": "printPrice",
+            "price": 34.99
+          }
+        ],
+        "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/00/57a0c306ee5a6",
+          "extension": "jpg"
+        },
+        "images": [
+          {
+            "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/00/57a0c306ee5a6",
+            "extension": "jpg"
+          }
+        ],
+        "creators": {
+          "available": 3,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/60904/creators",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/9484",
+              "name": "Steve McNiven",
+              "role": "penciller (cover)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/88",
+              "name": "Mark Millar",
+              "role": "writer"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/4430",
+              "name": "Jeff Youngquist",
+              "role": "editor"
+            }
+          ],
+          "returned": 3
+        },
+        "characters": {
+          "available": 0,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/60904/characters",
+          "items": [],
+          "returned": 0
+        },
+        "stories": {
+          "available": 2,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/60904/stories",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/132275",
+              "name": "cover from Wolverine: Old Man Logan (2017)",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/132276",
+              "name": "story from Wolverine: Old Man Logan (2017)",
+              "type": "interiorStory"
+            }
+          ],
+          "returned": 2
+        },
+        "events": {
+          "available": 0,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/60904/events",
+          "items": [],
+          "returned": 0
+        }
+      },
+      {
+        "id": 58533,
+        "digitalId": 0,
+        "title": "Miracleman by Gaiman & Buckingham: The Silver Age (2016) #3",
+        "issueNumber": 3,
+        "variantDescription": "",
+        "description": "The wait is over! Neil Gaiman and Mark Buckingham present the story you’ve waited decades for — the first ALL-NEW chapter in “The Silver Age!” High atop the Himalayas, Dicky Dauntless searches to find his place in the Age of Miracles. He’ll make new friends and encounter a frightening, familiar face — Johnny Bates! It’s Young Miracleman and Kid Miracleman face-to-face!",
+        "modified": "2016-05-09T08:57:52-0400",
+        "isbn": "",
+        "upc": "75960608469200311",
+        "diamondCode": "FEB160926",
+        "ean": "",
+        "issn": "",
+        "format": "Comic",
+        "pageCount": 48,
+        "textObjects": [
+          {
+            "type": "issue_solicit_text",
+            "language": "en-us",
+            "text": "The wait is over! Neil Gaiman and Mark Buckingham present the story you’ve waited decades for — the first ALL-NEW chapter in “The Silver Age!” High atop the Himalayas, Dicky Dauntless searches to find his place in the Age of Miracles. He’ll make new friends and encounter a frightening, familiar face — Johnny Bates! It’s Young Miracleman and Kid Miracleman face-to-face!"
+          }
+        ],
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/58533",
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/comics/issue/58533/miracleman_by_gaiman_buckingham_the_silver_age_2016_3?utm_campaign=apiRef&utm_source=416a785de25526453ade51c255b4f3f5"
+          }
+        ],
+        "series": {
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/21367",
+          "name": "Miracleman by Gaiman & Buckingham: The Silver Age (2016 - Present)"
+        },
+        "variants": [],
+        "collections": [],
+        "collectedIssues": [],
+        "dates": [
+          {
+            "type": "onsaleDate",
+            "date": "2017-01-25T00:00:00-0500"
+          },
+          {
+            "type": "focDate",
+            "date": "2017-01-10T00:00:00-0500"
+          }
+        ],
+        "prices": [
+          {
+            "type": "printPrice",
+            "price": 4.99
+          }
+        ],
+        "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/20/5698071874442",
+          "extension": "jpg"
+        },
+        "images": [
+          {
+            "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/20/5698071874442",
+            "extension": "jpg"
+          }
+        ],
+        "creators": {
+          "available": 1,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/58533/creators",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/4430",
+              "name": "Jeff Youngquist",
+              "role": "editor"
+            }
+          ],
+          "returned": 1
+        },
+        "characters": {
+          "available": 0,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/58533/characters",
+          "items": [],
+          "returned": 0
+        },
+        "stories": {
+          "available": 1,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/58533/stories",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/127665",
+              "name": "cover from Miracleman by Gaiman & Buckingham: The Silver Age (2016) #3",
+              "type": "cover"
+            }
+          ],
+          "returned": 1
+        },
+        "events": {
+          "available": 0,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/58533/events",
+          "items": [],
+          "returned": 0
+        }
+      },
+      {
+        "id": 58937,
+        "digitalId": 0,
+        "title": "Star Wars: The Force Awakens Adaptation (Hardcover)",
+        "issueNumber": 0,
+        "variantDescription": "",
+        "description": "It’s true — all of it! The blockbuster movie jumps from the big screen to the comic-book page! It’s been three decades since the Rebel Alliance destroyed the Death Star and toppled the Galactic Empire — but now, on the remote planet Jakku, there is a stirring in the Force. A young scavenger named Rey…a deserting Stormtrooper named Finn…an ace pilot named Poe…and a dark apprentice named Kylo Ren… Their lives are about to collide as the awakening begins. Writer Chuck Wendig (Star Wars: The Aftermath Trilogy) and artist Luke Ross (HERCULES) take us back into the saga of a lifetime! Collecting STAR WARS: THE FORCE AWAKENS ADAPTATION #1-6.",
+        "modified": "2016-08-02T10:20:24-0400",
+        "isbn": "978-1-302-90178-3",
+        "upc": "",
+        "diamondCode": "",
+        "ean": "9781302 901783 52499",
+        "issn": "",
+        "format": "Hardcover",
+        "pageCount": 144,
+        "textObjects": [
+          {
+            "type": "issue_solicit_text",
+            "language": "en-us",
+            "text": "It’s true — all of it! The blockbuster movie jumps from the big screen to the comic-book page! It’s been three decades since the Rebel Alliance destroyed the Death Star and toppled the Galactic Empire — but now, on the remote planet Jakku, there is a stirring in the Force. A young scavenger named Rey…a deserting Stormtrooper named Finn…an ace pilot named Poe…and a dark apprentice named Kylo Ren… Their lives are about to collide as the awakening begins. Writer Chuck Wendig (Star Wars: The Aftermath Trilogy) and artist Luke Ross (HERCULES) take us back into the saga of a lifetime! Collecting STAR WARS: THE FORCE AWAKENS ADAPTATION #1-6."
+          }
+        ],
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/58937",
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/comics/collection/58937/star_wars_the_force_awakens_adaptation_hardcover?utm_campaign=apiRef&utm_source=416a785de25526453ade51c255b4f3f5"
+          }
+        ],
+        "series": {
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/21475",
+          "name": "Star Wars: The Force Awakens Adaptation (2017 - Present)"
+        },
+        "variants": [],
+        "collections": [],
+        "collectedIssues": [],
+        "dates": [
+          {
+            "type": "onsaleDate",
+            "date": "2016-12-07T00:00:00-0500"
+          },
+          {
+            "type": "focDate",
+            "date": "2016-11-08T00:00:00-0500"
+          }
+        ],
+        "prices": [
+          {
+            "type": "printPrice",
+            "price": 24.99
+          }
+        ],
+        "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/b0/57a0ac9758ee2",
+          "extension": "jpg"
+        },
+        "images": [
+          {
+            "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/b0/57a0ac9758ee2",
+            "extension": "jpg"
+          }
+        ],
+        "creators": {
+          "available": 4,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/58937/creators",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/5160",
+              "name": "Phil Noto",
+              "role": "penciller (cover)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/2338",
+              "name": "Luke Ross",
+              "role": "penciller"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/12816",
+              "name": "Chuck Wendig",
+              "role": "writer"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/4430",
+              "name": "Jeff Youngquist",
+              "role": "editor"
+            }
+          ],
+          "returned": 4
+        },
+        "characters": {
+          "available": 0,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/58937/characters",
+          "items": [],
+          "returned": 0
+        },
+        "stories": {
+          "available": 2,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/58937/stories",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/128454",
+              "name": "cover from Star Wars: The Force Awakens Adaptation (2017)",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/128455",
+              "name": "story from Star Wars: The Force Awakens Adaptation (2017)",
+              "type": "interiorStory"
+            }
+          ],
+          "returned": 2
+        },
+        "events": {
+          "available": 0,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/58937/events",
+          "items": [],
+          "returned": 0
+        }
+      },
+      {
+        "id": 57983,
+        "digitalId": 0,
+        "title": "Star Wars: Episode III - Revenge of the Sith (Hardcover)",
+        "issueNumber": 0,
+        "variantDescription": "",
+        "description": "The Republic crumbles, an Empire is born, and a new evil rises in the official adaptation of Star Wars: Episode III Revenge of the Sith! As the Clone Wars rage, the fate of a young Jedi takes a dramatic turn, and many of the biggest questions raised by the original trilogy are answered. When fearsome droid leader General Grievous sweeps into the Republic capital and kidnaps Chancellor Palpatine, two Jedi Knights lead the desperate rescue mission. But Obi-Wan Kenobi and Anakin Skywalker will face far more than they bargained for, and their relationship will never be the same! Lightsabers clash, battles rage in space and armies go to war in a tale of sacrifice, treachery and loss. Collecting STAR WARS: EPISODE III — REVENGE OF THE SITH #1-4.",
+        "modified": "2016-08-01T16:58:20-0400",
+        "isbn": "978-1-302-90106-6",
+        "upc": "",
+        "diamondCode": "",
+        "ean": "9781302 901066 52499",
+        "issn": "",
+        "format": "Hardcover",
+        "pageCount": 104,
+        "textObjects": [
+          {
+            "type": "issue_solicit_text",
+            "language": "en-us",
+            "text": "The Republic crumbles, an Empire is born, and a new evil rises in the official adaptation of Star Wars: Episode III Revenge of the Sith! As the Clone Wars rage, the fate of a young Jedi takes a dramatic turn, and many of the biggest questions raised by the original trilogy are answered. When fearsome droid leader General Grievous sweeps into the Republic capital and kidnaps Chancellor Palpatine, two Jedi Knights lead the desperate rescue mission. But Obi-Wan Kenobi and Anakin Skywalker will face far more than they bargained for, and their relationship will never be the same! Lightsabers clash, battles rage in space and armies go to war in a tale of sacrifice, treachery and loss. Collecting STAR WARS: EPISODE III — REVENGE OF THE SITH #1-4."
+          }
+        ],
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/57983",
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/comics/collection/57983/star_wars_episode_iii_-_revenge_of_the_sith_hardcover?utm_campaign=apiRef&utm_source=416a785de25526453ade51c255b4f3f5"
+          }
+        ],
+        "series": {
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/21130",
+          "name": "Star Wars: Episode III - Revenge of the Sith (2016)"
+        },
+        "variants": [],
+        "collections": [],
+        "collectedIssues": [],
+        "dates": [
+          {
+            "type": "onsaleDate",
+            "date": "2016-11-30T00:00:00-0500"
+          },
+          {
+            "type": "focDate",
+            "date": "2016-11-01T00:00:00-0400"
+          }
+        ],
+        "prices": [
+          {
+            "type": "printPrice",
+            "price": 24.99
+          }
+        ],
+        "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/90/579fb85e0233a",
+          "extension": "jpg"
+        },
+        "images": [
+          {
+            "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/90/579fb85e0233a",
+            "extension": "jpg"
+          }
+        ],
+        "creators": {
+          "available": 4,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/57983/creators",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/12583",
+              "name": "Chris Cerasi",
+              "role": "writer"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/243",
+              "name": "Mike Mayhew",
+              "role": "penciller (cover)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/7620",
+              "name": "Doug Wheatley",
+              "role": "penciller"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/4430",
+              "name": "Jeff Youngquist",
+              "role": "editor"
+            }
+          ],
+          "returned": 4
+        },
+        "characters": {
+          "available": 0,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/57983/characters",
+          "items": [],
+          "returned": 0
+        },
+        "stories": {
+          "available": 2,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/57983/stories",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/126668",
+              "name": "cover from Star Wars: Episode III - Revenge of the Sith (2016)",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/126669",
+              "name": "story from Star Wars: Episode III - Revenge of the Sith (2016)",
+              "type": "interiorStory"
+            }
+          ],
+          "returned": 2
+        },
+        "events": {
+          "available": 0,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/57983/events",
+          "items": [],
+          "returned": 0
+        }
+      },
+      {
+        "id": 55939,
+        "digitalId": 0,
+        "title": "The Totally Awesome Hulk Vol. 2: Civil War II (Trade Paperback)",
+        "issueNumber": 0,
+        "variantDescription": "",
+        "description": "As CIVIL WAR II rages, Bruce Banner’s fate after SECRET WARS is revealed! Was he really cured by Amadeus Cho, or did the young genius make a disastrous miscalculation? For years, Banner was haunted by his gamma-irradiated curse, but Amadeus thought he was so smart he could handle it without a problem. Will Amadeus now become the latest Hulk to be consigned to a life of certain tragedy? When he loses someone close to him, that makes him mad. Very mad. The Marvel Universe won’t like Amadeus when he’s very mad. But one of its major players has his keen eyes on the situation — the Black Panther! And as T’Challa watches his every step, Amadeus takes on a mysterious new archenemy! Will the Hulk still be Totally Awesome when the dust clears? Collecting TOTALLY AWESOME HULK #7-12.",
+        "modified": "2016-08-02T10:25:34-0400",
+        "isbn": "978-0-7851-9610-5",
+        "upc": "",
+        "diamondCode": "",
+        "ean": "9780785 196105 51799",
+        "issn": "",
+        "format": "Trade Paperback",
+        "pageCount": 136,
+        "textObjects": [
+          {
+            "type": "issue_solicit_text",
+            "language": "en-us",
+            "text": "As CIVIL WAR II rages, Bruce Banner’s fate after SECRET WARS is revealed! Was he really cured by Amadeus Cho, or did the young genius make a disastrous miscalculation? For years, Banner was haunted by his gamma-irradiated curse, but Amadeus thought he was so smart he could handle it without a problem. Will Amadeus now become the latest Hulk to be consigned to a life of certain tragedy? When he loses someone close to him, that makes him mad. Very mad. The Marvel Universe won’t like Amadeus when he’s very mad. But one of its major players has his keen eyes on the situation — the Black Panther! And as T’Challa watches his every step, Amadeus takes on a mysterious new archenemy! Will the Hulk still be Totally Awesome when the dust clears? Collecting TOTALLY AWESOME HULK #7-12."
+          }
+        ],
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/55939",
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/comics/collection/55939/the_totally_awesome_hulk_vol_2_civil_war_ii_trade_paperback?utm_campaign=apiRef&utm_source=416a785de25526453ade51c255b4f3f5"
+          }
+        ],
+        "series": {
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/20579",
+          "name": "The Totally Awesome Hulk Vol. 2: Civil War II (2016)"
+        },
+        "variants": [],
+        "collections": [],
+        "collectedIssues": [],
+        "dates": [
+          {
+            "type": "onsaleDate",
+            "date": "2016-11-30T00:00:00-0500"
+          },
+          {
+            "type": "focDate",
+            "date": "2016-11-15T00:00:00-0500"
+          }
+        ],
+        "prices": [
+          {
+            "type": "printPrice",
+            "price": 17.99
+          }
+        ],
+        "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/80/57a0addbb3190",
+          "extension": "jpg"
+        },
+        "images": [
+          {
+            "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/80/57a0addbb3190",
+            "extension": "jpg"
+          }
+        ],
+        "creators": {
+          "available": 4,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/55939/creators",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/16",
+              "name": "Alan Davis",
+              "role": "penciller (cover)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/12288",
+              "name": "Michael Del Mundo",
+              "role": "penciller"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/536",
+              "name": "Greg Pak",
+              "role": "writer"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/4430",
+              "name": "Jeff Youngquist",
+              "role": "editor"
+            }
+          ],
+          "returned": 4
+        },
+        "characters": {
+          "available": 0,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/55939/characters",
+          "items": [],
+          "returned": 0
+        },
+        "stories": {
+          "available": 2,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/55939/stories",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/122863",
+              "name": "cover from Hulk (2016)",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/122864",
+              "name": "story from Hulk (2016)",
+              "type": "interiorStory"
+            }
+          ],
+          "returned": 2
+        },
+        "events": {
+          "available": 0,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/55939/events",
+          "items": [],
+          "returned": 0
+        }
+      },
+      {
+        "id": 56300,
+        "digitalId": 0,
+        "title": "Venom: Space Knight Vol. 2 - Enemies And Allies (Trade Paperback)",
+        "issueNumber": 0,
+        "variantDescription": "",
+        "description": "Venom’s new career as an Agent of the Cosmos continues with the hunt for Black October! Flash Thompson has been learning quickly on the job as a space knight in symbiote armor, helping the hopeless and impressing the oppressed across the galaxy. He’s even picked up a few new pals along the way. But even they might not be enough to stop what’s coming. Because when his symbiotic relationship becomes one of hunter and prey, it’s Flash season! And when he comes face-to-face with his Klyntar, things get ugly. If there’s any hope of repairing this relationship, Flash will need all the help he can get — but when he returns home to CIVIL WAR II, one of his oldest friends will be his enemy! You’ve never seen Spidey vs. Venom like this! Collecting VENOM: SPACE KNIGHT #7-13.",
+        "modified": "2016-08-02T09:43:16-0400",
+        "isbn": "978-0-7851-9655-6",
+        "upc": "",
+        "diamondCode": "",
+        "ean": "9780785 196556 51999",
+        "issn": "",
+        "format": "Trade Paperback",
+        "pageCount": 160,
+        "textObjects": [
+          {
+            "type": "issue_solicit_text",
+            "language": "en-us",
+            "text": "Venom’s new career as an Agent of the Cosmos continues with the hunt for Black October! Flash Thompson has been learning quickly on the job as a space knight in symbiote armor, helping the hopeless and impressing the oppressed across the galaxy. He’s even picked up a few new pals along the way. But even they might not be enough to stop what’s coming. Because when his symbiotic relationship becomes one of hunter and prey, it’s Flash season! And when he comes face-to-face with his Klyntar, things get ugly. If there’s any hope of repairing this relationship, Flash will need all the help he can get — but when he returns home to CIVIL WAR II, one of his oldest friends will be his enemy! You’ve never seen Spidey vs. Venom like this! Collecting VENOM: SPACE KNIGHT #7-13."
+          }
+        ],
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/56300",
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/comics/collection/56300/venom_space_knight_vol_2_-_enemies_and_allies_trade_paperback?utm_campaign=apiRef&utm_source=416a785de25526453ade51c255b4f3f5"
+          }
+        ],
+        "series": {
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/20646",
+          "name": "Venom: Space Knight Vol. 2 - Enemies And Allies (2016)"
+        },
+        "variants": [],
+        "collections": [],
+        "collectedIssues": [],
+        "dates": [
+          {
+            "type": "onsaleDate",
+            "date": "2016-11-30T00:00:00-0500"
+          },
+          {
+            "type": "focDate",
+            "date": "2016-11-15T00:00:00-0500"
+          }
+        ],
+        "prices": [
+          {
+            "type": "printPrice",
+            "price": 19.99
+          }
+        ],
+        "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/00/57a0a42dce54f",
+          "extension": "jpg"
+        },
+        "images": [
+          {
+            "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/00/57a0a42dce54f",
+            "extension": "jpg"
+          }
+        ],
+        "creators": {
+          "available": 6,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/56300/creators",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/5738",
+              "name": "ZACH HOWARD",
+              "role": "penciller (cover)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/12902",
+              "name": "KIM JACINTO",
+              "role": "penciller"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/1082",
+              "name": "Ariel Olivetti",
+              "role": "penciller"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/12369",
+              "name": "Gerardo Sandoval",
+              "role": "penciller"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/12444",
+              "name": "Robbie Thompson",
+              "role": "writer"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/4430",
+              "name": "Jeff Youngquist",
+              "role": "editor"
+            }
+          ],
+          "returned": 6
+        },
+        "characters": {
+          "available": 0,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/56300/characters",
+          "items": [],
+          "returned": 0
+        },
+        "stories": {
+          "available": 2,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/56300/stories",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/123563",
+              "name": "cover from Venom: Space Knight (2016)",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/123564",
+              "name": "story from Venom: Space Knight (2016)",
+              "type": "interiorStory"
+            }
+          ],
+          "returned": 2
+        },
+        "events": {
+          "available": 0,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/56300/events",
+          "items": [],
+          "returned": 0
+        }
+      },
+      {
+        "id": 56866,
+        "digitalId": 0,
+        "title": "Drax Vol. 2: The Children's Crusade (Trade Paperback)",
+        "issueNumber": 0,
+        "variantDescription": "",
+        "description": "Drax’s adventures in babysitting! From Guardian of the Galaxy to legal guardian, Drax is on a mission to return refugee children to safety. And things are going well — except for all the bounty hunters after him. And one of them is Cammi — a girl Drax once took under his wing and was tricked into caring about. Others include his old friend Pip the Troll and the unhinged Killer Thrill, who has her eyes on Drax’s paperweight — which just so happens to be a Fin Fang Foom egg! You gotta break a few eggs to make an omelet — but that only leads to a Council of Dragons coming after a newly hatched baby of their species! Hopefully some of Drax’s powerful friends can stop by for the brutal showdown! Collecting DRAX (2015) #6-11.",
+        "modified": "2016-08-02T11:21:35-0400",
+        "isbn": "978-0-7851-9663-1",
+        "upc": "",
+        "diamondCode": "",
+        "ean": "9780785 196631 51799",
+        "issn": "",
+        "format": "Trade Paperback",
+        "pageCount": 136,
+        "textObjects": [
+          {
+            "type": "issue_solicit_text",
+            "language": "en-us",
+            "text": "Drax’s adventures in babysitting! From Guardian of the Galaxy to legal guardian, Drax is on a mission to return refugee children to safety. And things are going well — except for all the bounty hunters after him. And one of them is Cammi — a girl Drax once took under his wing and was tricked into caring about. Others include his old friend Pip the Troll and the unhinged Killer Thrill, who has her eyes on Drax’s paperweight — which just so happens to be a Fin Fang Foom egg! You gotta break a few eggs to make an omelet — but that only leads to a Council of Dragons coming after a newly hatched baby of their species! Hopefully some of Drax’s powerful friends can stop by for the brutal showdown! Collecting DRAX (2015) #6-11."
+          }
+        ],
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/56866",
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/comics/collection/56866/drax_vol_2_the_childrens_crusade_trade_paperback?utm_campaign=apiRef&utm_source=416a785de25526453ade51c255b4f3f5"
+          }
+        ],
+        "series": {
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/20803",
+          "name": "Drax Vol. 2: The Children's Crusade (2016)"
+        },
+        "variants": [],
+        "collections": [],
+        "collectedIssues": [],
+        "dates": [
+          {
+            "type": "onsaleDate",
+            "date": "2016-11-23T00:00:00-0500"
+          },
+          {
+            "type": "focDate",
+            "date": "2016-11-08T00:00:00-0500"
+          }
+        ],
+        "prices": [
+          {
+            "type": "printPrice",
+            "price": 17.99
+          }
+        ],
+        "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/30/57a0bb266cf19",
+          "extension": "jpg"
+        },
+        "images": [
+          {
+            "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/30/57a0bb266cf19",
+            "extension": "jpg"
+          }
+        ],
+        "creators": {
+          "available": 4,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/56866/creators",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/10023",
+              "name": "Cullen Bunn",
+              "role": "writer"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/12474",
+              "name": "CM Punk",
+              "role": "writer"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/12298",
+              "name": "Scott Hepburn",
+              "role": "penciller (cover)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/4430",
+              "name": "Jeff Youngquist",
+              "role": "editor"
+            }
+          ],
+          "returned": 4
+        },
+        "characters": {
+          "available": 0,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/56866/characters",
+          "items": [],
+          "returned": 0
+        },
+        "stories": {
+          "available": 2,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/56866/stories",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/124549",
+              "name": "cover from Drax (2016)",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/124550",
+              "name": "story from Drax (2016)",
+              "type": "interiorStory"
+            }
+          ],
+          "returned": 2
+        },
+        "events": {
+          "available": 0,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/56866/events",
+          "items": [],
+          "returned": 0
+        }
+      },
+      {
+        "id": 57608,
+        "digitalId": 0,
+        "title": "Guardians of the Galaxy: New Guard Vol. 2 - Wanted (Hardcover)",
+        "issueNumber": 0,
+        "variantDescription": "",
+        "description": "Peter Quill, a.k.a. Star-Lord, returns to the fold! But what does that mean for Kitty Pryde, a.k.a. Star-Lord? Is the Marvel Universe big enough for two Star-Lords? Find out as the Guardians face a new Galactic order! The Thing might miss some things about Earth, but he does admit that space has its perks. Like riding alien horses into action as Ben Grimm: Space Barbarian! Venom and Groot get in way over their heads fighting Skrulls — and everyone knows when Bendis writes Skrulls, it’s bad news! The galaxy’s two deadliest warriors, Gamora and Drax, take the fight to the Badoon! And Angela makes her dramatic return! They’re the galaxy’s most wanted, but they’ll still guard it all the same! Collecting GUARDIANS OF THE GALAXY (2015) #6-10.",
+        "modified": "2016-08-02T10:04:49-0400",
+        "isbn": "978-0-7851-9519-1",
+        "upc": "",
+        "diamondCode": "",
+        "ean": "9780785 195191 52499",
+        "issn": "",
+        "format": "Hardcover",
+        "pageCount": 112,
+        "textObjects": [
+          {
+            "type": "issue_solicit_text",
+            "language": "en-us",
+            "text": "Peter Quill, a.k.a. Star-Lord, returns to the fold! But what does that mean for Kitty Pryde, a.k.a. Star-Lord? Is the Marvel Universe big enough for two Star-Lords? Find out as the Guardians face a new Galactic order! The Thing might miss some things about Earth, but he does admit that space has its perks. Like riding alien horses into action as Ben Grimm: Space Barbarian! Venom and Groot get in way over their heads fighting Skrulls — and everyone knows when Bendis writes Skrulls, it’s bad news! The galaxy’s two deadliest warriors, Gamora and Drax, take the fight to the Badoon! And Angela makes her dramatic return! They’re the galaxy’s most wanted, but they’ll still guard it all the same! Collecting GUARDIANS OF THE GALAXY (2015) #6-10."
+          }
+        ],
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/57608",
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/comics/collection/57608/guardians_of_the_galaxy_new_guard_vol_2_-_wanted_hardcover?utm_campaign=apiRef&utm_source=416a785de25526453ade51c255b4f3f5"
+          }
+        ],
+        "series": {
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/20996",
+          "name": "Guardians of the Galaxy: New Guard Vol. 2 - Wanted (2016)"
+        },
+        "variants": [],
+        "collections": [],
+        "collectedIssues": [],
+        "dates": [
+          {
+            "type": "onsaleDate",
+            "date": "2016-11-23T00:00:00-0500"
+          },
+          {
+            "type": "focDate",
+            "date": "2016-11-08T00:00:00-0500"
+          }
+        ],
+        "prices": [
+          {
+            "type": "printPrice",
+            "price": 24.99
+          }
+        ],
+        "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/b0/57a0a8f347682",
+          "extension": "jpg"
+        },
+        "images": [
+          {
+            "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/b0/57a0a8f347682",
+            "extension": "jpg"
+          }
+        ],
+        "creators": {
+          "available": 4,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/57608/creators",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/12208",
+              "name": "Arthur Adams",
+              "role": "penciller (cover)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/24",
+              "name": "Brian Michael Bendis",
+              "role": "writer"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/11912",
+              "name": "Valerio Schiti",
+              "role": "penciller"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/4430",
+              "name": "Jeff Youngquist",
+              "role": "editor"
+            }
+          ],
+          "returned": 4
+        },
+        "characters": {
+          "available": 0,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/57608/characters",
+          "items": [],
+          "returned": 0
+        },
+        "stories": {
+          "available": 2,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/57608/stories",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/126020",
+              "name": "cover from Guardians of the Galaxy (2016)",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/126021",
+              "name": "story from Guardians of the Galaxy (2016)",
+              "type": "interiorStory"
+            }
+          ],
+          "returned": 2
+        },
+        "events": {
+          "available": 0,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/57608/events",
+          "items": [],
+          "returned": 0
+        }
+      },
+      {
+        "id": 56600,
+        "digitalId": 0,
+        "title": "Captain Marvel by Jim Starlin: The Complete Collection (Trade Paperback)",
+        "issueNumber": 0,
+        "variantDescription": "",
+        "description": "The ultimate collection of the creator that defined Captain Marvel! Under the aegis of writer/artist Jim Starlin, CAPTAIN MARVEL evolved into one of comics’ most influential titles. Starlin stripped the Kree Captain to his core and resurrected him as a truly cosmic hero. This may have been Starlin’s first super-hero saga, but it introduced some of his signature characters — including Drax the Destroyer and Mar-Vell’s nemesis, Thanos! As Thanos’ mad quest for unlimited power rages, Captain Marvel teams with the Avengers for a truly epic confrontation! Years later, Starlin returned for the strikingly personal and moving “Death of Captain Marvel” — and rewrote the rule book on a super hero’s passing. Collecting CAPTAIN MARVEL (1968) #25-34, IRON MAN (1968) #55, MARVEL FEATURE (1971) #12, MARVEL GRAPHIC NOVEL #1 and material from DAREDEVIL (1964) #105 and LIFE OF CAPTAIN MARVEL #1-5.",
+        "modified": "2016-08-02T10:53:59-0400",
+        "isbn": "978-1-302-90017-5",
+        "upc": "",
+        "diamondCode": "",
+        "ean": "9781302 900175 53499",
+        "issn": "",
+        "format": "Trade Paperback",
+        "pageCount": 352,
+        "textObjects": [
+          {
+            "type": "issue_solicit_text",
+            "language": "en-us",
+            "text": "The ultimate collection of the creator that defined Captain Marvel! Under the aegis of writer/artist Jim Starlin, CAPTAIN MARVEL evolved into one of comics’ most influential titles. Starlin stripped the Kree Captain to his core and resurrected him as a truly cosmic hero. This may have been Starlin’s first super-hero saga, but it introduced some of his signature characters — including Drax the Destroyer and Mar-Vell’s nemesis, Thanos! As Thanos’ mad quest for unlimited power rages, Captain Marvel teams with the Avengers for a truly epic confrontation! Years later, Starlin returned for the strikingly personal and moving “Death of Captain Marvel” — and rewrote the rule book on a super hero’s passing. Collecting CAPTAIN MARVEL (1968) #25-34, IRON MAN (1968) #55, MARVEL FEATURE (1971) #12, MARVEL GRAPHIC NOVEL #1 and material from DAREDEVIL (1964) #105 and LIFE OF CAPTAIN MARVEL #1-5."
+          }
+        ],
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/56600",
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/comics/collection/56600/captain_marvel_by_jim_starlin_the_complete_collection_trade_paperback?utm_campaign=apiRef&utm_source=416a785de25526453ade51c255b4f3f5"
+          }
+        ],
+        "series": {
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/20719",
+          "name": "Captain Marvel by Jim Starlin: The Complete Collection (2016)"
+        },
+        "variants": [],
+        "collections": [],
+        "collectedIssues": [],
+        "dates": [
+          {
+            "type": "onsaleDate",
+            "date": "2016-11-23T00:00:00-0500"
+          },
+          {
+            "type": "focDate",
+            "date": "2016-11-08T00:00:00-0500"
+          }
+        ],
+        "prices": [
+          {
+            "type": "printPrice",
+            "price": 34.99
+          }
+        ],
+        "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/b0/57a0b488480d7",
+          "extension": "jpg"
+        },
+        "images": [
+          {
+            "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/b0/57a0b488480d7",
+            "extension": "jpg"
+          }
+        ],
+        "creators": {
+          "available": 5,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/56600/creators",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/104",
+              "name": "Steve Englehart",
+              "role": "writer"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/1245",
+              "name": "Mike Friedrich",
+              "role": "writer"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/144",
+              "name": "Steve Gerber",
+              "role": "writer"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/146",
+              "name": "Jim Starlin",
+              "role": "penciller (cover)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/4430",
+              "name": "Jeff Youngquist",
+              "role": "editor"
+            }
+          ],
+          "returned": 5
+        },
+        "characters": {
+          "available": 0,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/56600/characters",
+          "items": [],
+          "returned": 0
+        },
+        "stories": {
+          "available": 2,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/56600/stories",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/124055",
+              "name": "cover from Captain Marvel by Jim Starlin: The Complete Collection (2016)",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/124056",
+              "name": "story from Captain Marvel by Jim Starlin: The Complete Collection (2016)",
+              "type": "interiorStory"
+            }
+          ],
+          "returned": 2
+        },
+        "events": {
+          "available": 0,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/56600/events",
+          "items": [],
+          "returned": 0
+        }
+      },
+      {
+        "id": 58862,
+        "digitalId": 0,
+        "title": "X-Men: Bishop's Crossing (Trade Paperback)",
+        "issueNumber": 0,
+        "variantDescription": "",
+        "description": "When new villains overthrow the Hellfire Club in a bloody coup, a freshly formed team of X-Men is caught in the middle! But their battle is interrupted when hundreds of escaped convicts arrive from the future — pursued by the ruthless mutant policeman named Bishop! Raised since childhood on the legends of the X-Men, how will Bishop react to meeting his idols? What deadly portent of doom does he carry with him? And why does he quickly set his sights on Gambit? Meanwhile, the rest of the X-Men have their hands full as Colossus’s long-lost brother returns, Storm and Forge’s romance reaches a dramatic turning point, and trouble brews for Cyclops and Jean Grey! Welcome to the X-Men, Bishop — hope you survive the experience! Collecting UNCANNY X-MEN (1981) #281-293 and X-MEN (1991) #8.",
+        "modified": "2016-08-02T12:01:47-0400",
+        "isbn": "978-1-302-90170-7",
+        "upc": "",
+        "diamondCode": "",
+        "ean": "9781302 901707 53499",
+        "issn": "",
+        "format": "Trade Paperback",
+        "pageCount": 352,
+        "textObjects": [
+          {
+            "type": "issue_solicit_text",
+            "language": "en-us",
+            "text": "When new villains overthrow the Hellfire Club in a bloody coup, a freshly formed team of X-Men is caught in the middle! But their battle is interrupted when hundreds of escaped convicts arrive from the future — pursued by the ruthless mutant policeman named Bishop! Raised since childhood on the legends of the X-Men, how will Bishop react to meeting his idols? What deadly portent of doom does he carry with him? And why does he quickly set his sights on Gambit? Meanwhile, the rest of the X-Men have their hands full as Colossus’s long-lost brother returns, Storm and Forge’s romance reaches a dramatic turning point, and trouble brews for Cyclops and Jean Grey! Welcome to the X-Men, Bishop — hope you survive the experience! Collecting UNCANNY X-MEN (1981) #281-293 and X-MEN (1991) #8."
+          }
+        ],
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/58862",
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/comics/collection/58862/x-men_bishops_crossing_trade_paperback?utm_campaign=apiRef&utm_source=416a785de25526453ade51c255b4f3f5"
+          }
+        ],
+        "series": {
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/21457",
+          "name": "X-Men: Bishop's Crossing (2016)"
+        },
+        "variants": [],
+        "collections": [],
+        "collectedIssues": [],
+        "dates": [
+          {
+            "type": "onsaleDate",
+            "date": "2016-11-23T00:00:00-0500"
+          },
+          {
+            "type": "focDate",
+            "date": "2016-11-08T00:00:00-0500"
+          }
+        ],
+        "prices": [
+          {
+            "type": "printPrice",
+            "price": 34.99
+          }
+        ],
+        "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/5/b0/57a0c4b71043e",
+          "extension": "jpg"
+        },
+        "images": [
+          {
+            "path": "http://i.annihil.us/u/prod/marvel/i/mg/5/b0/57a0c4b71043e",
+            "extension": "jpg"
+          }
+        ],
+        "creators": {
+          "available": 9,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/58862/creators",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/1827",
+              "name": "John Byrne",
+              "role": "writer"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/96",
+              "name": "Jim Lee",
+              "role": "writer"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/3637",
+              "name": "Scott Lobdell",
+              "role": "writer"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/1336",
+              "name": "Whilce Portacio",
+              "role": "writer"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/175",
+              "name": "Andy Kubert",
+              "role": "penciller"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/444",
+              "name": "Tom Raney",
+              "role": "penciller"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/214",
+              "name": "John Romita JR.",
+              "role": "penciller"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/384",
+              "name": "Rurik Tyler",
+              "role": "penciller"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/4430",
+              "name": "Jeff Youngquist",
+              "role": "editor"
+            }
+          ],
+          "returned": 9
+        },
+        "characters": {
+          "available": 0,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/58862/characters",
+          "items": [],
+          "returned": 0
+        },
+        "stories": {
+          "available": 2,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/58862/stories",comics.json
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/128310",
+              "name": "cover from X-Men: Bishop's Crossing (2016)",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/128311",
+              "name": "story from X-Men: Bishop's Crossing (2016)",
+              "type": "interiorStory"
+            }
+          ],
+          "returned": 2
+        },
+        "events": {
+          "available": 0,
+          "collectionURI": "http://gateway.marvel.com/v1/public/comics/58862/events",
+          "items": [],
+          "returned": 0
+        }
+      }
+    ]
+  }
+}

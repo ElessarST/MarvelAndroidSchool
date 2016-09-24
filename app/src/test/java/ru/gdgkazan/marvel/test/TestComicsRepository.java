@@ -11,7 +11,7 @@ import ru.gdgkazan.marvel.repository.ComicsRepository;
 import rx.Observable;
 
 /**
- * @author Artur Vasilov
+ * @author Aydar Farrakhov
  */
 public class TestComicsRepository implements ComicsRepository {
 

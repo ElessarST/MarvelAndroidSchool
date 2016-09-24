@@ -56,5 +56,7 @@ public final class RepositoryProvider {
     @MainThread
     public static void init() {
         sComicsRepository = new DefaultComicsRepository();
+        sEventsRepository = new DefaultEventsRepository();
+        sCharactersRepository = new DefaultCharactersRepository();
     }
 }

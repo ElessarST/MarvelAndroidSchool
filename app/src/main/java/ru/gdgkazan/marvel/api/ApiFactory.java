@@ -65,8 +65,7 @@ public final class ApiFactory {
     }
 
     public static void recreate() {
-        sClient = null;
-        sClient = getClient();
+        OkHttpProvider.recreate();
         sComicsService = buildRetrofit().create(ComicsService.class);
         sEventsService = buildRetrofit().create(EventsService.class);
         sCharacterService = buildRetrofit().create(CharactersService.class);
@@ -76,31 +75,10 @@ public final class ApiFactory {
     private static Retrofit buildRetrofit() {
         return new Retrofit.Builder()
                 .baseUrl(BuildConfig.API_ENDPOINT)
-                .client(getClient())
+                .client(OkHttpProvider.provideClient())
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .build();
     }
 
-    @NonNull
-    private static OkHttpClient getClient() {
-        OkHttpClient client = sClient;
-        if (client == null) {
-            synchronized (ApiFactory.class) {
-                client = sClient;
-                if (client == null) {
-                    client = sClient = buildClient();
-                }
-            }
-        }
-        return client;
-    }
-
-    @NonNull
-    private static OkHttpClient buildClient() {
-        return new OkHttpClient.Builder()
-                .addInterceptor(LoggingInterceptor.create())
-                .addInterceptor(ApiKeyInterceptor.create())
-                .build();
-    }
 }
