@@ -32,7 +32,7 @@ import rx.Observable;
 
 public class CharactersListFragment extends Fragment
         implements CommonListView<Character>,
-        BaseAdapter.OnItemClickListener<Character>{
+        BaseAdapter.OnItemClickListener<Character> {
 
     @BindView(R.id.recyclerView)
     EmptyRecyclerView mRecyclerView;

@@ -19,8 +19,6 @@ import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import ru.arturvasilov.rxloader.LifecycleHandler;
-import ru.arturvasilov.rxloader.LoaderLifecycleHandler;
 import ru.gdgkazan.marvel.R;
 import ru.gdgkazan.marvel.content.Image;
 import ru.gdgkazan.marvel.content.character.Character;
@@ -63,8 +61,7 @@ public class CharacterActivity extends AppCompatActivity implements CharacterVie
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
-        LifecycleHandler lifecycleHandler = LoaderLifecycleHandler.create(this, getSupportLoaderManager());
-        mPresenter = new CharacterPresenter(lifecycleHandler, this);
+        mPresenter = new CharacterPresenter(this);
         mPresenter.init(getIntent().getSerializableExtra(Constants.CHARACTER_KEY));
     }
 

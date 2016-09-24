@@ -15,9 +15,10 @@ import rx.Observable;
 public class CharactersListPresenter {
 
     private final String[] descriptions = {
-            "Один из выдающихся героев Вселенной Marvel, с нелегкой судьбой",
+            "One of outstanding Marvel heroes that have seen many battles",
+            "Big, ugly, outrageous",
             "Просто мимо крокодил",
-            "Очень важный тип"
+            "Very important subject"
     };
 
     private final LifecycleHandler mLifecycleHandler;
@@ -35,21 +36,24 @@ public class CharactersListPresenter {
                 .doOnSubscribe(mView::showLoading)
                 .doOnTerminate(mView::hideLoading)
                 .compose(mLifecycleHandler.load(R.id.characters_request))
-                .subscribe((List<Character> characters) -> {
-                    for (Character character : characters) {
-                        if (character.getDescription().isEmpty()) {
-                            character.setDescription(descriptions[(int)(character.getId() % descriptions.length)]);
-                        }
-                    }
-                    mView.showItems(characters);
-                }, throwable -> mView.showError());
+                .map(this::prepareDescriptions)
+                .subscribe(mView::showItems, throwable -> mView.showError());
+    }
+
+    private List<Character> prepareDescriptions(List<Character> characters) {
+        for (Character character : characters) {
+            if (character.getDescription().isEmpty()) {
+                character.setDescription(descriptions[(int)(character.getId() % descriptions.length)]);
+            }
+        }
+        return characters;
     }
 
     public Observable<List<Character>> loadMoreItems(int page) {
-        return Observable.empty();
-////                RepositoryProvider.provideCharactersRepository()
-////                .characters(page * Constants.PAGE_SIZE, Constants.PAGE_SIZE)
-////                .compose(mLifecycleHandler.load(R.id.comics_request_more + page));
+        return RepositoryProvider.provideCharactersRepository()
+                .characters(page * Constants.PAGE_SIZE, Constants.PAGE_SIZE)
+                .map(this::prepareDescriptions)
+                .compose(mLifecycleHandler.load(R.id.characters_request_more + page));
     }
 
     public void onItemClick(Character character) {
