@@ -34,9 +34,9 @@ public class CharactersListPresenter {
 
     public Observable<List<Character>> loadMoreItems(int page) {
         return Observable.empty();
-//                RepositoryProvider.provideCharactersRepository()
-//                .characters(page * Constants.PAGE_SIZE, Constants.PAGE_SIZE)
-//                .compose(mLifecycleHandler.load(R.id.comics_request_more + page));
+////                RepositoryProvider.provideCharactersRepository()
+////                .characters(page * Constants.PAGE_SIZE, Constants.PAGE_SIZE)
+////                .compose(mLifecycleHandler.load(R.id.comics_request_more + page));
     }
 
     public void onItemClick(Character character) {

@@ -27,4 +27,5 @@
     <string name="price_format">%s$</string>
     <string name="pages">Pages:</string>
     <string name="some_error">Error</string>
+    <string name="title_activity_caracter">Character info</string>
 </resources>

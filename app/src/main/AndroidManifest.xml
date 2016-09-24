@@ -42,6 +42,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ru.gdgkazan.marvel.screen.MainActivity"/>
         </activity>
+        <activity
+            android:name=".screen.character.CharacterActivity"
+            android:label="@string/title_activity_caracter"
+            android:parentActivityName=".screen.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ru.gdgkazan.marvel.screen.MainActivity"/>
+        </activity>
     </application>
-
 </manifest>
