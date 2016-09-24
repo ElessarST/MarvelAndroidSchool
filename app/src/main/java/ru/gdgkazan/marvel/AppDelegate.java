@@ -48,6 +48,7 @@ public class AppDelegate extends Application {
     private void setupRealm() {
         RealmConfiguration configuration = new RealmConfiguration.Builder(this)
                 .rxFactory(new RealmObservableFactory())
+                .deleteRealmIfMigrationNeeded()
                 .build();
         Realm.setDefaultConfiguration(configuration);
     }

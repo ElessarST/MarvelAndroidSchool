@@ -20,7 +20,7 @@ public class Character extends RealmObject implements ListItem{
     @SerializedName("description")
     private String description;
 
-    @SerializedName("image")
+    @SerializedName("thumbnail")
     private Image image;
 
     public Long getId() {

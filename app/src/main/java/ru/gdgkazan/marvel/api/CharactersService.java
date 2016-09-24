@@ -2,6 +2,7 @@ package ru.gdgkazan.marvel.api;
 
 import retrofit2.http.GET;
 import retrofit2.http.Path;
+import retrofit2.http.Query;
 import ru.gdgkazan.marvel.content.character.CharactersResponse;
 import ru.gdgkazan.marvel.content.comics.ComicsResponse;
 import rx.Observable;
@@ -12,7 +13,7 @@ import rx.Observable;
 public interface CharactersService {
 
     @GET("characters")
-    Observable<CharactersResponse> characters();
+    Observable<CharactersResponse> characters(@Query("offset") Long offset, @Query("limit") Long limit);
 
 
     @GET("characters/{characterId/comics}")
