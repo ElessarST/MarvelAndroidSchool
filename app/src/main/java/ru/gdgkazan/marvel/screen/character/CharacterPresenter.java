@@ -2,8 +2,11 @@ package ru.gdgkazan.marvel.screen.character;
 
 import android.support.annotation.NonNull;
 
+import java.io.Serializable;
+
 import ru.arturvasilov.rxloader.LifecycleHandler;
 import ru.gdgkazan.marvel.R;
+import ru.gdgkazan.marvel.content.character.Character;
 import ru.gdgkazan.marvel.repository.RepositoryProvider;
 
 /**
@@ -27,6 +30,14 @@ public class CharacterPresenter {
                 .doOnTerminate(mView::hideLoading)
                 .compose(mLifecycleHandler.load(R.id.single_character_request))
                 .subscribe(mView::show, throwable -> mView.showError());
+    }
+
+    public void init(Serializable character) {
+        if (character instanceof Character) {
+            mView.show((Character) character);
+        } else {
+            throw new IllegalArgumentException();
+        }
     }
 
 }

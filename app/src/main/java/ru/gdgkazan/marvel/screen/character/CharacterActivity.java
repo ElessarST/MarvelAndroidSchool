@@ -26,7 +26,6 @@ import ru.gdgkazan.marvel.content.Image;
 import ru.gdgkazan.marvel.content.character.Character;
 import ru.gdgkazan.marvel.general.LoadingDialog;
 import ru.gdgkazan.marvel.general.LoadingView;
-import ru.gdgkazan.marvel.screen.events.EventActivity;
 import ru.gdgkazan.marvel.util.Constants;
 import ru.gdgkazan.marvel.util.Images;
 
@@ -66,12 +65,13 @@ public class CharacterActivity extends AppCompatActivity implements CharacterVie
 
         LifecycleHandler lifecycleHandler = LoaderLifecycleHandler.create(this, getSupportLoaderManager());
         mPresenter = new CharacterPresenter(lifecycleHandler, this);
-        mPresenter.init(getIntent().getLongExtra(Constants.ID_KEY, 0));
+        mPresenter.init(getIntent().getSerializableExtra(Constants.CHARACTER_KEY));
     }
 
     public static void start(@NonNull Activity activity, @NonNull Character character) {
-        Intent intent = new Intent(activity, EventActivity.class);
-        intent.putExtra(Constants.NAME_KEY, character.getName());
+        Intent intent = new Intent(activity, CharacterActivity.class);
+        intent.putExtra(Constants.CHARACTER_KEY, character);
+        intent.putExtra(Constants.IMAGE_KEY, character.getImage());
         intent.putExtra(Constants.ID_KEY, character.getId());
         activity.startActivity(intent);
     }

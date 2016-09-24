@@ -10,6 +10,7 @@ public interface Constants {
 
     String ID_KEY = "id";
     String IMAGE_KEY = "image";
+    String CHARACTER_KEY = "character";
     String NAME_KEY = "name";
 
 }

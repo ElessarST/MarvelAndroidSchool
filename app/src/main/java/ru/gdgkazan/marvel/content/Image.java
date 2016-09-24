@@ -2,12 +2,14 @@ package ru.gdgkazan.marvel.content;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
+
 import io.realm.RealmObject;
 
 /**
  * Created by aydar on 17.09.16.
  */
-public class Image extends RealmObject {
+public class Image extends RealmObject implements Serializable{
 
     @SerializedName("path")
     private String mPath;

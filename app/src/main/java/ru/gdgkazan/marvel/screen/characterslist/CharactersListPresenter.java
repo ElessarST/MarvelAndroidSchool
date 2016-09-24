@@ -14,6 +14,12 @@ import rx.Observable;
 
 public class CharactersListPresenter {
 
+    private final String[] descriptions = {
+            "Один из выдающихся героев Вселенной Marvel, с нелегкой судьбой",
+            "Просто мимо крокодил",
+            "Очень важный тип"
+    };
+
     private final LifecycleHandler mLifecycleHandler;
     private final CommonListView<Character> mView;
 
@@ -29,7 +35,14 @@ public class CharactersListPresenter {
                 .doOnSubscribe(mView::showLoading)
                 .doOnTerminate(mView::hideLoading)
                 .compose(mLifecycleHandler.load(R.id.characters_request))
-                .subscribe(mView::showItems, throwable -> mView.showError());
+                .subscribe((List<Character> characters) -> {
+                    for (Character character : characters) {
+                        if (character.getDescription().isEmpty()) {
+                            character.setDescription(descriptions[(int)(character.getId() % descriptions.length)]);
+                        }
+                    }
+                    mView.showItems(characters);
+                }, throwable -> mView.showError());
     }
 
     public Observable<List<Character>> loadMoreItems(int page) {

@@ -37,7 +37,7 @@ public class DefaultCharactersRepository implements CharactersRepository {
                 .characterById(id)
                 .map(CharactersResponse::getData)
                 .map(CharactersResponseData::getResults)
-                .map(events -> events.get(0))
+                .map(characters -> characters.get(0))
                 .compose(RxUtils.async());
     }
 
