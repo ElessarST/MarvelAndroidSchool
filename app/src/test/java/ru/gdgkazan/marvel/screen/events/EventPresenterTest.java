@@ -9,10 +9,12 @@ import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 import org.mockito.Mockito;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import ru.arturvasilov.rxloader.LifecycleHandler;
+import ru.gdgkazan.marvel.content.character.Character;
 import ru.gdgkazan.marvel.content.comics.Comics;
 import ru.gdgkazan.marvel.content.event.Event;
 import ru.gdgkazan.marvel.repository.RepositoryProvider;
@@ -25,6 +27,7 @@ import ru.gdgkazan.marvel.test.TestEventsRepository;
  */
 @RunWith(JUnit4.class)
 public class EventPresenterTest {
+
     private EventsView mView;
     private EventPresenter mPresenter;
 
@@ -74,6 +77,14 @@ public class EventPresenterTest {
             this.mCharacters = characters;
         }
 
-
+        @NonNull
+        @Override
+        public rx.Observable<Event> eventById(long id){
+            if (this.error){
+                return rx.Observable.error(new IOException());
+            } else {
+                return rx.Observable.just(this.events);
+            }
+        }
     }
 }
